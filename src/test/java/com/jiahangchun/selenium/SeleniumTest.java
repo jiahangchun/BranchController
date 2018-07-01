@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class SeleniumTest {
     public static void main(String[] args) {
-//        System.setProperty("webdriver.chrome.driver","H:\\springTemplate\\BranchController\\chromedriver.exe");//chromedriver服务地址没用 的
+        System.setProperty("webdriver.chrome.driver","H:\\springTemplate\\BranchController\\chromedriver.exe");//chromedriver服务地址没用 的
         WebDriver driver =new ChromeDriver(); //新建一个WebDriver 的对象，但是new 的是FirefoxDriver的驱动
         driver.get("http://www.baidu.com");//打开指定的网站
         driver.findElement(By.id("kw")).sendKeys(new  String[] {"hello"});//找到kw元素的id，然后输入hello
