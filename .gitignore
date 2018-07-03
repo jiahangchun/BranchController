@@ -19,3 +19,4 @@ logs/
 *.log
 .DS_Store
 .out
+workspace.xml
