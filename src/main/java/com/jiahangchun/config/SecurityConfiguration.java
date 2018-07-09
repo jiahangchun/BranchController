@@ -21,12 +21,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.
                 authorizeRequests().
-                antMatchers("/user/**").
-                hasRole("USER").
-                and().
-                formLogin().
-                and().
-                csrf().
-                disable();
+                antMatchers("/test/**").permitAll().
+//                antMatchers("/assets/**").permitAll().
+                antMatchers("/user/**").hasRole("USER").
+//                and().formLogin().loginPage("/login.jsp").permitAll().loginProcessingUrl("/login").
+                and().formLogin().
+                and().logout().permitAll().
+                and().rememberMe().
+                and().csrf().disable();
     }
 }
