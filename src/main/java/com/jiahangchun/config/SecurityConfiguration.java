@@ -8,7 +8,10 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 import javax.sql.DataSource;
 
@@ -19,6 +22,11 @@ import javax.sql.DataSource;
  **/
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    DataSource dataSource;
+
+
     /**
      * Description：配置Spring Security
      * 1.开启对任何地址（"/**"）的访问控制，要求必须具备"ROLE_USER"的角色
@@ -35,9 +43,25 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //                and().formLogin().loginPage("/login.jsp").permitAll().loginProcessingUrl("/login").
                 and().formLogin().
                 and().logout().permitAll().
-                and().rememberMe().
+                and().rememberMe().tokenRepository(persistentTokenRepository()).
                 and().csrf().disable();
     }
+
+
+
+    /**
+     * 可持久化的cookie token服务
+     *
+     * @return
+     */
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository() {
+        JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
+        tokenRepository.setDataSource(dataSource);
+        return tokenRepository;
+    }
+
+
 
 
 //    /**
@@ -103,7 +127,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         auth
                 .jdbcAuthentication()
+//                .passwordEncoder(passwordEncoder())//启用密码加密功能
                 .dataSource(dataSource);
+    }
+
+    /**
+     * 密码加密算法
+     *
+     * @return
+     */
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
 }

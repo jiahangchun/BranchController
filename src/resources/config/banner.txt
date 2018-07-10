@@ -19,8 +19,8 @@ ${AnsiColor.BRIGHT_YELLOW}
 //      ========`-.____`-.___\_____/___.-`____.-'========         //
 //                           `=---='                              //
 //      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //
-//            佛祖保佑       永不宕机     永无BUG                 //
-//                            mose                               //
+//            佛祖保佑       永不宕机     永无BUG                     //
+//                                                                //
 ////////////////////////////////////////////////////////////////////
 ${AnsiColor.RED}
 spring boot-${spring-boot.version}${application.version}${application.formatted-version}${application.formatted-version}
