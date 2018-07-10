@@ -1,5 +1,6 @@
 package com.jiahangchun.config;
 
+import com.jiahangchun.filter.IpFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -9,11 +10,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
+import javax.servlet.Filter;
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author chunchun
@@ -39,14 +46,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 authorizeRequests().
                 antMatchers("/test/**").permitAll().
 //                antMatchers("/assets/**").permitAll().
-                antMatchers("/user/**").hasRole("USER").
+        antMatchers("/user/**").hasRole("USER").
 //                and().formLogin().loginPage("/login.jsp").permitAll().loginProcessingUrl("/login").
-                and().formLogin().
+        and().formLogin().
                 and().logout().permitAll().
+//                and().exceptionHandling().accessDeniedPage("/accessDenied").
                 and().rememberMe().tokenRepository(persistentTokenRepository()).
-                and().csrf().disable();
+                and().addFilterBefore(ipFilter(), FilterSecurityInterceptor.class).//过滤器拦截
+                csrf().disable();
     }
-
 
 
     /**
@@ -60,8 +68,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         tokenRepository.setDataSource(dataSource);
         return tokenRepository;
     }
-
-
 
 
 //    /**
@@ -79,36 +85,36 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     /**
      * SET FOREIGN_KEY_CHECKS=0;
-     *
+     * <p>
      * -- ----------------------------
      * -- Table structure for authorities
      * -- ----------------------------
      * DROP TABLE IF EXISTS `authorities`;
      * CREATE TABLE `authorities` (
-     *   `username` varchar(50) NOT NULL,
-     *   `authority` varchar(50) NOT NULL,
-     *   UNIQUE KEY `ix_auth_username` (`username`,`authority`),
-     *   CONSTRAINT `fk_authorities_users` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
+     * `username` varchar(50) NOT NULL,
+     * `authority` varchar(50) NOT NULL,
+     * UNIQUE KEY `ix_auth_username` (`username`,`authority`),
+     * CONSTRAINT `fk_authorities_users` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
      * ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-     *
+     * <p>
      * -- ----------------------------
      * -- Records of authorities
      * -- ----------------------------
      * INSERT INTO `authorities` VALUES ('admin', 'ROLE_ADMIN');
      * INSERT INTO `authorities` VALUES ('admin', 'ROLE_USER');
      * INSERT INTO `authorities` VALUES ('user', 'ROLE_USER');
-     *
+     * <p>
      * -- ----------------------------
      * -- Table structure for users
      * -- ----------------------------
      * DROP TABLE IF EXISTS `users`;
      * CREATE TABLE `users` (
-     *   `username` varchar(50) NOT NULL,
-     *   `password` varchar(500) NOT NULL,
-     *   `enabled` tinyint(1) NOT NULL,
-     *   PRIMARY KEY (`username`)
+     * `username` varchar(50) NOT NULL,
+     * `password` varchar(500) NOT NULL,
+     * `enabled` tinyint(1) NOT NULL,
+     * PRIMARY KEY (`username`)
      * ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-     *
+     * <p>
      * -- ----------------------------
      * -- Records of users
      * -- ----------------------------
@@ -127,7 +133,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         auth
                 .jdbcAuthentication()
-//                .passwordEncoder(passwordEncoder())//启用密码加密功能
+                .passwordEncoder(passwordEncoder())//启用密码加密功能
                 .dataSource(dataSource);
     }
 
@@ -139,6 +145,55 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+
+    /**
+     * 获取默认创建的UserDetailsService，开启分组功能，关闭用户直接授权功能，并发布为Spring Bean
+     *
+     * @param auth
+     * @return
+     */
+    @Bean
+    @Autowired
+    public UserDetailsService userDetailsService(AuthenticationManagerBuilder auth) {
+        UserDetailsService userDetailsService = auth.getDefaultUserDetailsService();
+        if (JdbcUserDetailsManager.class.isInstance(userDetailsService)) {
+            JdbcUserDetailsManager jdbcUserDetailsManager = (JdbcUserDetailsManager) userDetailsService;
+            jdbcUserDetailsManager.setEnableGroups(true);//开启分组功能
+            jdbcUserDetailsManager.setEnableAuthorities(false);//关闭用户直接获取权限功能
+        }
+        return userDetailsService;
+    }
+
+
+    /**
+     * 加密密码
+     * shengcheng
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode("password");
+        System.out.println(encodedPassword);
+    }
+
+
+    /**
+     * \
+     * 配置具体的ip限制策略
+     *
+     * @return
+     */
+    private Filter ipFilter() {
+        List<String> ipAddresses = new ArrayList<>();
+        ipAddresses.add("0:0:0:0:0:0:0:1");//localhost
+        IpFilter ipFilter = new IpFilter();
+        ipFilter.setTargetRole("ROLE_ADMIN");
+        ipFilter.setTargetRole("ROLE_USER");
+        ipFilter.setAuthorizedIpAddresses(ipAddresses);
+        return ipFilter;
     }
 
 }
