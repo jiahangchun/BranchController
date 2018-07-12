@@ -189,6 +189,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private Filter ipFilter() {
         List<String> ipAddresses = new ArrayList<>();
         ipAddresses.add("0:0:0:0:0:0:0:1");//localhost
+        ipAddresses.add("172.16.1.44");
+        ipAddresses.add("127.0.0.1");
         IpFilter ipFilter = new IpFilter();
         ipFilter.setTargetRole("ROLE_ADMIN");
         ipFilter.setTargetRole("ROLE_USER");

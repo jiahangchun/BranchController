@@ -37,6 +37,7 @@ public class IpFilter extends OncePerRequestFilter {
             if (shouldCheck && !authorizedIpAddresses.isEmpty()) {
                 boolean authorized = false;
                 for (String ipAddress : authorizedIpAddresses) {
+                    System.out.println(request.getRemoteAddr());
                     if (request.getRemoteAddr().equals(ipAddress)) {
                         authorized = true;
                         break;
