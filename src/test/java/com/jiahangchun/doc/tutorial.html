@@ -1,0 +1,1359 @@
+<html>
+<header>
+<title>Gif4J PRO for Java - Tutorial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="style.css" type="text/css">
+</header>
+<body bgcolor="#ffffff" >
+<center>
+<img src="images/gif4j_software_logotype.gif"><br><br>
+<h4>Gif4J PRO v 2.3 Tutorial</h4>
+<br>
+</center>
+<a name="content"></a><table align="center" width="400" border="0" cellspacing="1" bgcolor="#FFFFFF" cellpadding="0">
+<tr><td bgcolor="#324697" align="center" class="white_medium"><b>Loading GIF Images</b></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimageread" class="blue">Load & Decode a GIF Image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#loadgifimageextractmetainfo" class="blue">Load a GIF Image and Extract GIF File Format Meta Info</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+<tr><td bgcolor="#324697" align="center" class="white_medium"><b>Creating GIF Images</b></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagecreate" class="blue">Construct a GIF Image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimageresizestrategies" class="blue">Resize Strategies</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagecomments" class="blue">Extract, Add and Remove GIF Image Comments</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifframeaccess" class="blue">Access GIF Image Frames</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+<tr><td bgcolor="#324697" align="center" class="white_medium"><b>Creating GIF Frames</b></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifframecreate" class="blue">Construct a GIFFrame</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#absrelpos" class="blue">Absolute and Relative Internal GIF Frame Positioning</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifframepossize" class="blue">Get Frame's Position and Size</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifframedisposalmethoddelaytime" class="blue">Disposal Methods & Delay Time</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifframeadd" class="blue">Adding GIF Frames to a GIF Image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifframeimagedatacolormodelretrieve" class="blue">Retrieve Frame's Image Data and Color Model</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+<tr><td bgcolor="#324697" align="center" class="white_medium"><b>Transform GIF Images</b></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagetransform" class="blue">Transform a GIF Image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimageresize" class="blue">Resize a GIF image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagescale" class="blue">Scale a GIF image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagerotate" class="blue">Rotate a GIF image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimageflip" class="blue">Flip a GIF image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+<tr><td  bgcolor="#324697" align="center" class="white_medium">Saving GIF Images</td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagewrite" class="blue">Encode and Save a GIF Image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagejavaimageio" class="blue">Image I/O Support</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+<tr><td bgcolor="#324697" align="center" class="white_medium">Watermarking</td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#watermarkcreate" class="blue">Construct a Watermark</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#bufferedimagewatermarkapply" class="blue">Apply a Watermark to a BufferedImage</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifimagewatermarkapply" class="blue">Apply a Watermark to a GIF image</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#gifframewatermarkapply" class="blue">Apply a Watermark to a separate GIF Image Frame</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+<tr><td bgcolor="#324697" align="center" class="white_medium">Morphing Filters</td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#morphingfilters" class="blue">GIF Image Morphing Filters</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+<tr><td bgcolor="#324697" align="center" class="white_medium">Text Rendering</td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" class="white_small"><a href="#textrendering" class="blue">Text Rendering</a></td></tr>
+<tr><td bgcolor="#F0F0F0" align="center" style="font-size: 5px">&nbsp;</td></tr>
+</table>
+<br><br>
+
+
+
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">Load and decode GIF Images. Extract All GIF Image meta information.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+<br class="small">
+                <a name="gifimageread"></a><h1 align="center">Load & Decode a GIF Image</h1>
+                    <p>
+                    The <a href="java-api-pro/com/gif4j/GifDecoder.html" target="_blank">GifDecoder</a> java class
+                    lets programmers load and decode gif images from a gif file formatted input stream with a single method call.
+                    The next methods to load and decode gif images are available:<br>
+                    <br class="small">
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;decode</font><font color="#000000">(</font><font color="#000000">InputStream&nbsp;inputStream</font><font color="#000000">)&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException&nbsp;</font><font color="#000000"></font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;decode</font><font color="#000000">(</font><font color="#000000">File&nbsp;input</font><font color="#000000">)&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException&nbsp;</font><font color="#000000"></font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;decode</font><font color="#000000">(</font><font color="#000000">URL&nbsp;input</font><font color="#000000">)&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException&nbsp;</font><font color="#000000"></font><br/>
+
+                    <br class="small">
+                    <br class="small"><span class="text_red">Note</span>:
+                    If you load GIF images for displaying purposes (for example to display as image icons within a swing application)
+                    then you should use the standard Java API: <code>java.awt.Toolkit#getImage</code>, <code>java.awt.Toolkit#createImage</code>
+
+                    or <code>javax.swing.ImageIcon</code>.
+                    </p>
+                    <a name="loadgifimageextractmetainfo"></a><h1 align="center">Java Example: Load a GIF Image and Extract GIF File Format Meta Info</h1>
+                    <p>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifDecoder;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifFrame;</font><br/>
+
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifImage;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.*;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.image.BufferedImage;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.image.IndexColorModel;</font><br/>
+
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.File;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.IOException;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.Iterator;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#3f7f5f">//&nbsp;...</font><br/>
+
+                    <font color="#ffffff"></font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;loadGifImageAndExtractMetaInfo</font><font color="#000000">(</font><font color="#000000">File&nbsp;file</font><font color="#000000">)&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException&nbsp;</font><font color="#000000">{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;load&nbsp;and&nbsp;decode&nbsp;gif&nbsp;image&nbsp;from&nbsp;the&nbsp;file</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;gifImage&nbsp;=&nbsp;GifDecoder.decode</font><font color="#000000">(</font><font color="#000000">file</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;print&nbsp;general&nbsp;GIF&nbsp;image&nbsp;info</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;gif&nbsp;image&nbsp;format&nbsp;version:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;gifImage.getVersion</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;gif&nbsp;image&nbsp;logic&nbsp;screen&nbsp;width:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;gifImage.getScreenWidth</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;gif&nbsp;image&nbsp;logic&nbsp;screen&nbsp;height:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;gifImage.getScreenHeight</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;check&nbsp;if&nbsp;one&nbsp;or&nbsp;more&nbsp;comments&nbsp;present</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">gifImage.getNumberOfComments</font><font color="#000000">()&nbsp;</font><font color="#000000">&gt;&nbsp;</font><font color="#990000">0</font><font color="#000000">)&nbsp;{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;get&nbsp;iterator&nbsp;over&nbsp;gif&nbsp;image&nbsp;textual&nbsp;comments</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Iterator&nbsp;commentsIterator&nbsp;=&nbsp;gifImage.comments</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">commentsIterator.hasNext</font><font color="#000000">())</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#000000">commentsIterator.next</font><font color="#000000">())</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;print&nbsp;comments</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;number&nbsp;of&nbsp;frames:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;gifImage.getNumberOfFrames</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;below&nbsp;we&nbsp;iterate&nbsp;frames&nbsp;in&nbsp;loop</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;but&nbsp;it&nbsp;can&nbsp;also&nbsp;be&nbsp;done&nbsp;using&nbsp;Iterator&nbsp;instance:&nbsp;gifImage.frames()</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">i&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;i&nbsp;&lt;&nbsp;gifImage.getNumberOfFrames</font><font color="#000000">()</font><font color="#000000">;&nbsp;i++</font><font color="#000000">)&nbsp;{</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;------frame(&#34;&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#000000">(</font><font color="#000000">i&nbsp;+&nbsp;</font><font color="#990000">1</font><font color="#000000">)&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;)---------&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifFrame&nbsp;frame&nbsp;=&nbsp;gifImage.getFrame</font><font color="#000000">(</font><font color="#000000">i</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;width:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frame.getWidth</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;height:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frame.getHeight</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;position:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frame.getX</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;,&#34;&nbsp;</font><font color="#000000">+&nbsp;frame.getY</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;disposal&nbsp;method:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frame.getDisposalMethod</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;delay&nbsp;time:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frame.getDelay</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;is&nbsp;interlaced:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frame.isInterlaced</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;get&nbsp;frame's&nbsp;color&nbsp;model</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">IndexColorModel&nbsp;frameColorModel&nbsp;=&nbsp;frame.getColorModel</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;number&nbsp;of&nbsp;colors:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frameColorModel.getMapSize</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;is&nbsp;transparent:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frameColorModel.hasAlpha</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;transparent&nbsp;index:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;frameColorModel.getTransparentPixel</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//get&nbsp;frame's&nbsp;representation&nbsp;as&nbsp;an&nbsp;Image</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Image&nbsp;image&nbsp;=&nbsp;frame.getAsImage</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//get&nbsp;frame's&nbsp;representation&nbsp;as&nbsp;a&nbsp;BufferedImage</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">BufferedImage&nbsp;bufferedImage&nbsp;=&nbsp;frame.getAsBufferedImage</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">gifImage;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+
+                    <br class="small">
+                 </p>
+</td>
+</tr>
+</table>
+<br>
+
+
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+
+
+<br>
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">Construct GIF Images. Resize Strategies & Looping. Extract, add and remove GIF Image comments</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+
+<br class="small">
+                <a name="gifimagecreate"></a><h1 align="center">Construct a GIF Image</h1>
+                    <p>
+                    The <a href="java-api-pro/com/gif4j/GifImage.html" target="_blank">GifImage</a> java class
+                    is used to represent a gif image as a sequence of one or more <a href="java-api-pro/com/gif4j/GifFrame.html" target="_blank">frames</a>
+                    and to aggregate and encode some general gif image specific parameters including GIF image logic screen size, GIF file format version,
+                    loop information and ASCII textual comments.
+                    </p>
+
+                    <p style="margin-top: 10px;">
+                    The GifImage class has the next constructors:<br><br>
+                    <span class="code">
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage</font><font color="#000000">()</font>;<br/>
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">resizeStrategy</font><font color="#000000">)</font>;<br/>
+
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">width,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">height</font><font color="#000000">)</font>;<br/>
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">width,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">height,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">resizeStrategy</font><font color="#000000">)</font>;<br/>
+
+                </span>
+                    <br>
+                    The first two constructors create <span class="code">GifImage</span> with indefinite general gif image width and height -
+                    these parameters will be taken from the first added frame.
+                <br><br>
+                    <span class="text_red">Hint</span>: You can always get the current gif image width/height using the next methods:<br><br>
+                    <span class="code">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getCurrentLogicWidth</font><font color="#000000">()</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getCurrentLogicHeight</font><font color="#000000">()</font><br/>
+                    </span>
+                 <br><br class="small">
+                 </p>
+                 <a name="gifimageresizestrategies"></a><h1 align="center">Resize Strategies</h1>
+                 <p>Gif4J PRO undertakes to control general image size (take into consideration all internal frames' size and their positions) using one of the predefined resize strategies:
+                <a target="_blank" href="java-api-pro/com/gif4j/GifImage.html#RESIZE_STRATEGY_CROP_TO_FIT_IMAGE_SIZE">Crop to Fit Image Size</a>,
+                <a target="_blank" href="java-api-pro/com/gif4j/GifImage.html#RESIZE_STRATEGY_SCALE_TO_FIT_IMAGE_SIZE">Scale to Fit Image Size</a> and
+                <a target="_blank" href="java-api-pro/com/gif4j/GifImage.html#RESIZE_STRATEGY_EXTEND_TO_CURRENT">Extend to Current</a>.
+                First two strategies allows to fix the general gif image size (logical screen size).
+                    The last extends logical screen size to fit all added gif frames.<br>
+
+                    Below examples demostrate all strategies (see <i>examples/ResizeStrategies</i>):<br><br>
+                    <center>
+                    <img border="1" src="images/tutorial/ResizeStrategiesExample_crop_to_fit.gif"><br>
+                                    crop to fit image size (predefined size: 150x150)<br><br>
+                    <img border="1" src="images/tutorial/ResizeStrategiesExample_scale_to_fit.gif"><br>
+                                    scale to fit image size (predefined size: 150x150)<br><br>
+
+                    <img border="1" src="images/tutorial/ResizeStrategiesExample_extend_to_current.gif"><br>
+                                    extend to current (extended size: 200x200)<br><br>
+                    </center>
+                 </p>
+                 <a name="gifimagelooping"></a><h1 align="center">GIF Image Looping</h1>
+                 <p>Animated gif images can have a Looping Application Extension Block that tells Encoder to loop the entire GIF file.
+    Based on the Gif89a specification you can set number of iterations between 0 and 65535 where 0 means indefinite (infinite) looping.
+    The next method should be used:<br><br>
+    <span class="code">
+
+    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setLoopNumber</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">number</font><font color="#000000">)&nbsp;</font><br/><br/>
+    </span>
+    <span class="text_red">Note</span>: By default a new <code>GifImage</code> doesn't contain a Looping Application Extension Block at all which is equal to 1 iteration.
+    To set, for example, infinite looping you should call <code>gifImage.setLoopNumber(0)</code>.<br><br class="small">
+
+    <span class="text_red">Note</span>: A lot of gif encoders and viewers (including Microsoft IE browser) ignore number of iterations more than 1
+    and iterate an animated gif image indefinitely.<br><br class="small">
+    <span class="text_red">Hint</span>: You can set default delay time between frames. This delay is automatically applied to adding frames without delay parameter set.
+    The next method should be used:<br><br class="small">
+    <span class="code">
+    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setDefaultDelay</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">delay</font><font color="#000000">)&nbsp;</font><br/>
+
+    </span><br class="small">
+    <span class="text_red">Note</span>: Any delay parameter is set in 1/100 (centiseconds) - value 100 means delay in 1 second.
+    Default delay between frames is set to 200 (2 seconds).
+                 </p>
+                 <br class="small"><a name="gifimagecomments"></a><h1 align="center">Extract, Add and Remove GIF Image Comments</h1>
+                 <p>The GIF Image Comment Extension contains textual information which
+                  is not part of the actual graphics in the GIF Data Stream. It is suitable
+                  for including comments about the graphics, credits, descriptions or any
+                  other type of non-control and non-graphic data.<br><br class="small">
+                  The next methods should be used to add, get and remove comments (please consult <a href="java-api-pro/com/gif4j/GifImage.html" target="_blank">GifImage API</a> for more info):<br><br>
+
+                    <span class="code">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;getComment</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">index</font><font color="#000000">);</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">removeComment</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">index</font><font color="#000000">);</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getNumberOfComments</font><font color="#000000">();</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">Iterator&nbsp;comments</font><font color="#000000">();</font><br/>
+                    </span>
+                    <br class="small">
+                    <h2 align="center">Gif4J PRO Java Example: Add a comment to a GIF image</h2>
+
+                    <span class="code">
+                      <code>
+                        <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifDecoder;</font><br/>
+                        <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifEncoder;</font><br/>
+                        <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifImage;</font><br/>
+                        <font color="#ffffff"></font><br/>
+
+                        <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.File;</font><br/>
+                        <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.IOException;</font><br/>
+                        <font color="#ffffff"></font><br/>
+                        <font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">addCommentToGifImage</font><font color="#000000">(</font><font color="#000000">File&nbsp;file,&nbsp;String&nbsp;comment</font><font color="#000000">)</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException&nbsp;</font><font color="#000000">{</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//read&nbsp;gif&nbsp;image&nbsp;from&nbsp;the&nbsp;file</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;gifImage&nbsp;=&nbsp;GifDecoder.decode</font><font color="#000000">(</font><font color="#000000">file</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;add&nbsp;comment</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">gifImage.addComment</font><font color="#000000">(</font><font color="#000000">comment</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;write&nbsp;commented&nbsp;gif&nbsp;image&nbsp;to&nbsp;the&nbsp;same&nbsp;file</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifEncoder.encode</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;file</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                      </code>
+                    </span>
+                 </p>
+
+                 <br class="small">
+                    <a name="gifframeaccess"></a><h1 align="center">Access GIF Image Frames</h1>
+                  <p>
+                  You can get a number of already added frames, get an iterator over the frames or access frames in the random order using the next methods
+                  (please consult <a href="java-api-pro/com/gif4j/GifImage.html" target="_blank">GifImage API</a> for more info):<br>
+                  <br class="small">
+                  <span class="code">
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifFrame&nbsp;getFrame</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">index</font><font color="#000000">);&nbsp;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifFrame&nbsp;getLastFrame</font><font color="#000000">();</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getNumberOfFrames</font><font color="#000000">();</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">Iterator&nbsp;frames</font><font color="#000000">();</font><br/>
+                  </span>
+                  <br class="small">
+                  <br class="small"><h2 align="center">Gif4J PRO Java Example: Double the total GIF animation time</h2>
+                  <br class="small">
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifImage;</font><br/>
+
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifFrame;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.Iterator;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#3f7f5f">//&nbsp;...</font><br/>
+                    <font color="#ffffff"></font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;doubleAnimationTime</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage</font><font color="#000000">)&nbsp;{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;iterate&nbsp;frames</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">Iterator&nbsp;framesIterator&nbsp;=&nbsp;gifImage.frames</font><font color="#000000">()</font><font color="#000000">;&nbsp;framesIterator.hasNext</font><font color="#000000">()</font><font color="#000000">;</font><font color="#000000">)&nbsp;{</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;get&nbsp;the&nbsp;next&nbsp;frame</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifFrame&nbsp;frame&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">GifFrame</font><font color="#000000">)&nbsp;</font><font color="#000000">framesIterator.next</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;double&nbsp;frame's&nbsp;delay</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">frame.setDelay</font><font color="#000000">(</font><font color="#000000">frame.getDelay</font><font color="#000000">()&nbsp;</font><font color="#000000">*&nbsp;</font><font color="#990000">2</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">gifImage;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                  <br class="small">
+                  </p>
+</td>
+</tr>
+</table>
+<br>
+
+
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+
+
+
+<br>
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">Construct GIF Frames. Add GIF Frames to GIF Images. Absolute & Relative GIF Frame Positioning</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+         <br class="small">
+                <a name="gifframecreate"></a><h1 align="center">Construct a GIF Frame</h1>
+                    <p>
+                    The <a href="java-api-pro/com/gif4j/GifFrame.html" target="_blank">GifFrame</a> java class
+                    is used as a container to aggregate and encode the gif format specific information about a single gif image frame.
+                    </p>
+                    <p style="margin-top: 10px;">
+
+                        <a href="java-api-pro/com/gif4j/GifFrame.html" target="_blank">GifFrame</a> constructors can be divided into 2 types according to the desired frame position (absolute or relative).
+                        <i>"absolute positioning"</i> costructors contain <span class="code"><b>Point</b></span> parameter and
+                        <i>"relative positioning"</i> constructors contain <span class="code"><b>layout constraint</b></span> parameter.<br>
+
+                        <br class="small"><span class="text_red">Note</span>: If you use <i>"relative positioning"</i> then
+                        the final position is calculated according to one of the predifined <span class="code"><b>layout constraint</b></span>
+                         before the final encoding process starts.<br>
+                        <br class="small"><a name="absrelpos"></a><h1 align="center">Absolute and Relative Internal GIF Frame Positioning</h1>
+                        Below examples demostrate relative positioning and how you can use it (see <i>examples/FramePositioning</i>):<br><br>
+
+                        <center>
+                        <img border="1" src="images/tutorial/FramePositioningExample_relative_1.gif"><br>
+                                        (size: 300x300, every frame size: 100x100)<br><br>
+                        <img border="1" src="images/tutorial/FramePositioningExample_relative_2.gif"><br>
+                                        (size: 200x200, every frame size: 100x100)<br><br>
+                        <img border="1" src="images/tutorial/FramePositioningExample_relative_3.gif"><br>
+                                        image tour (size: 300x240, every frame is scaled down using <a href="java-api-pro/com/gif4j/ImageUtils.html" class="green" target="_blank">ImageUtils</a> to 150x130)<br><br>
+
+                        </center>
+                    </p>
+                    <a name="gifframepossize"></a><h1 align="center">Get Frame's Position and Size</h1>
+                    <p>
+                        You can get frame's position and size using the next methods:<br><br class="small">
+                <span class="code">
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getX</font><font color="#000000">();</font><br/>
+
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getY</font><font color="#000000">();</font><br/>
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getWidth</font><font color="#000000">();</font><br/>
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getHeight</font><font color="#000000">();</font><br/>
+
+                </span>
+                    </p>
+                 <a name="gifframedisposalmethoddelaytime"></a><h1 align="center">Disposal Methods & Delay Time</h1>
+                 <p><b>Disposal Method</b> - indicates the way in which the graphic is to be treated after being displayed.
+                According to Gif89a format specification there are 4 disposal methods:<br>
+                <a href="java-api-pro/com/gif4j/GifFrame.htmll#DISPOSAL_METHOD_NOT_SPECIFIED" target="_blank">Not Specified</a>,
+                <a href="java-api-pro/com/gif4j/GifFrame.htmll#DISPOSAL_METHOD_DO_NOT_DISPOSE" target="_blank">Do Not Dispose</a>,
+                <a href="java-api-pro/com/gif4j/GifFrame.htmll#DISPOSAL_METHOD_RESTORE_TO_BACKGROUND_COLOR" target="_blank">Restore To Background Color</a> and
+                <a href="java-api-pro/com/gif4j/GifFrame.htmll#DISPOSAL_METHOD_RESTORE_TO_PREVIOUS" target="_blank">Restore To Previous</a>.<br>
+
+                <br class="small">You can set disposal method through corresponding <span class="code">GifFrame</span>
+                constructors or using the next method:<br><br class="small">
+                <span class="code">
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setDisposalMethod</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">disposalMethod</font><font color="#000000">)&nbsp;</font><br/>
+
+                </span>
+                <br class="small">You can get disposal method using the next method:<br><br class="small">
+                <span class="code">
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getDisposalMethod</font><font color="#000000">()&nbsp;</font><br/>
+                </span>
+                <br>
+
+                 <b>Delay Time</b> - If not 0, this field specifies the number of
+                 hundredths (1/100) of a second to wait before continuing with the
+                 processing of the Data Stream. The clock starts ticking immediately
+                 after the graphic is rendered.<br><br class="small">
+                You can set delay time through corresponding <span class="code">GifFrame</span>
+                constructors or using the next method:<br><br class="small">
+                <span class="code">
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setDelay</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">delay</font><font color="#000000">)&nbsp;</font><br/>
+
+                </span>
+                <br class="small">You can get frame's delay time using the next method:<br><br class="small">
+                <span class="code">
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getDelay</font><font color="#000000">()&nbsp;</font><br/>
+                </span>
+                 </p>
+
+                 <br class="small"><a name="gifframeadd"></a><h1 align="center">Adding GIF Frames to a GIF Image</h1>
+                 <p>To add <span class="code">GifFrame</span>(s) to <span class="code">GifImage</span>(s)
+                    you can use the next methods (please consult <a href="java-api-pro/com/gif4j/GifFrame.html" class="green" target="_blank">GifFrame</a> API for more information):<br><br>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame</font><font color="#000000">);&nbsp;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame,&nbsp;MorphingFilter&nbsp;filter</font><font color="#000000">);&nbsp;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame,&nbsp;Watermark&nbsp;watermark</font><font color="#000000">);&nbsp;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame,&nbsp;MorphingFilter&nbsp;filter,&nbsp;Watermark&nbsp;watermark</font><font color="#000000">);</font><br/>
+                    <br class="small">
+                 </p>
+
+                 <br class="small"><a name="gifframeimagedatacolormodelretrieve"></a><h1 align="center">Retrieve Frame's Image Data and Color Model</h1>
+                 <p>To retrieve a copy of the frame's image data as an instance of <code>Image</code> or <code>BufferedImage</code> java classes
+                 you should use the next methods:<br>
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">Image&nbsp;getAsImage</font><font color="#000000">();&nbsp;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">BufferedImage&nbsp;getAsBufferedImage</font><font color="#000000">();&nbsp;</font><br/>
+                    <br class="small">
+                    To retrieve a copy of the frame's image color model as an instance of <code>IndexColorModel</code> the next method can be used:<br>
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">IndexColorModel&nbsp;getColorModel</font><font color="#000000">();&nbsp;</font><br/>
+
+                    <br class="small">
+                    <span class="text_red">Hint:</span> You can use a copy of the frame's image color model to get frame's transparency information
+                    through <code>IndexColorModel</code> methods: <code>hasAlpha()</code>, <code>getTransparency()</code>, <code>getTransparentPixel()</code> etc.
+                    <br><br class="small">
+                 </p>
+</td>
+</tr>
+</table>
+<br>
+
+
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+
+
+<br>
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">Transform GIF Images: Resize, Scale, Rotate and Flip Operations</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+     <br class="small">
+                <a name="gifimagetransform"></a><h1 align="center">Transform a GIF Image</h1>
+                    <p>
+                    The <a href="java-api-pro/com/gif4j/GifTransformer.html" target="_blank">GifTransformer</a> class
+                    is the helper java class containing static methods to affine transform animated and non-animated GIF images
+                    represented by <a href="java-api-pro/com/gif4j/GifImage.html" target="_blank">GifImage</a> objects
+                    including resize, scale, rotate and flip gif image transform operations.
+                    The next methods to transform gif images are available (please consult the <a href="java-api-pro/com/gif4j/GifTransformer.html" target="_blank">Gif4J PRO Java API</a> for more info):<br>
+
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;rotate</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,&nbsp;</font><font color="#7f0055"><b>double&nbsp;</b></font><font color="#000000">theta,&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">smooth</font><font color="#000000">);</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;rotate90Left</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage</font><font color="#000000">);</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;rotate90Right</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage</font><font color="#000000">);</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;rotate180</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage</font><font color="#000000">);</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;scale</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>double&nbsp;</b></font><font color="#000000">xscale,&nbsp;</font><font color="#7f0055"><b>double&nbsp;</b></font><font color="#000000">yscale,&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">smooth</font><font color="#000000">);</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;resize</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">width,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">height,&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">smooth</font><font color="#000000">);</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;flipHorizontal</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage</font><font color="#000000">);</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">GifImage&nbsp;flipVertical</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage</font><font color="#000000">);</font><br/>
+                    <br class="small">
+                    <br class="small"><span class="text_red">Note</span>:
+                    <i><b>smooth</b></i> parameter (if presents) lets Java developers choose a gif image processing algorithm:
+                    if 'true' then the higher priority is given to a gif image smoothness than processing speed.
+                    But on the other hand it can bring about sizeable increase of the transformed GIF image size.</p>
+
+                    </p>
+                    <a name="gifimageresize"></a><h1 align="center">Gif4J PRO Java Example: Resize a GIF image using GifTransformer</h1>
+                    <p>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;resize&nbsp;gif&nbsp;image&nbsp;to&nbsp;the&nbsp;width=100px</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;with&nbsp;maintaining&nbsp;the&nbsp;aspect&nbsp;ratio&nbsp;of&nbsp;the&nbsp;original&nbsp;gif&nbsp;image&nbsp;dimension</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;resizedGifImage1&nbsp;=&nbsp;GifTransformer.resize</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">100</font><font color="#000000">,&nbsp;-</font><font color="#990000">1</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>false</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;same&nbsp;but&nbsp;smoothly</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;resizedGifImage1_smooth&nbsp;=&nbsp;GifTransformer.resize</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">100</font><font color="#000000">,&nbsp;-</font><font color="#990000">1</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;resize&nbsp;gif&nbsp;image&nbsp;to&nbsp;the&nbsp;width=100px&nbsp;and&nbsp;height=60px</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;resizedGifImage2&nbsp;=&nbsp;GifTransformer.resize</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">100</font><font color="#000000">,&nbsp;</font><font color="#990000">60</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>false</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;same&nbsp;but&nbsp;smoothly</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;resizedGifImage2_smooth&nbsp;=&nbsp;GifTransformer.resize</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">100</font><font color="#000000">,&nbsp;</font><font color="#990000">60</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <br class="small">
+                        <table align="center" width="100%" border="0" cellspacing="1" bgcolor="#FFFFFF" cellpadding="1">
+                            <tr>
+                            <td bgcolor="#324697" align="center" colspan="2" class="white_medium">Resized GIF Images (the test image is out logo)</td>
+                            </tr>
+
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/resize/resizedGifImage1.gif" alt="resized to width=100 gif image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/resize/resizedGifImage1_smooth.gif" alt="smoothly resized to width=100 he gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [100, -1]
+                            </td>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [100, -1, smoothly]
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/resize/resizedGifImage2.gif" alt="resized to width=100 and height=60 gif image using Java">
+
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/resize/resizedGifImage2_smooth.gif" alt="smoothly resized to width=100 and height=60 gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [100, 60]
+                            </td>
+
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [100, 60, smoothly]
+                            </td>
+                            </tr>
+                        </table>
+                    </p>
+                    <br><br class="small">
+                    <a name="gifimagescale"></a><h1 align="center">Gif4J PRO Java Example: Scale a GIF image using GifTransformer</h1>
+                    <p>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;scale&nbsp;gif&nbsp;image&nbsp;by&nbsp;factor&nbsp;0.7&nbsp;with&nbsp;maintaining</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;aspect&nbsp;ratio&nbsp;of&nbsp;the&nbsp;original&nbsp;gif&nbsp;image&nbsp;dimension</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;scaledGifImage1&nbsp;=&nbsp;GifTransformer.scale</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">0.7</font><font color="#000000">,&nbsp;-</font><font color="#990000">1</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>false</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;same&nbsp;but&nbsp;smoothly</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;scaledGifImage1_smooth&nbsp;=&nbsp;GifTransformer.scale</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">0.7</font><font color="#000000">,&nbsp;-</font><font color="#990000">1</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;scale&nbsp;gif&nbsp;image&nbsp;by&nbsp;X-axis&nbsp;scale&nbsp;factor&nbsp;=&nbsp;1.2&nbsp;and&nbsp;Y-axis&nbsp;scale&nbsp;factor&nbsp;=&nbsp;0.8</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;scaledGifImage2&nbsp;=&nbsp;GifTransformer.scale</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">1.2</font><font color="#000000">,&nbsp;</font><font color="#990000">0.8</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>false</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;same&nbsp;but&nbsp;smoothly</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;scaledGifImage2_smooth&nbsp;=&nbsp;GifTransformer.scale</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#990000">1.2</font><font color="#000000">,&nbsp;</font><font color="#990000">0.8</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                        <br class="small">
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <br class="small">
+                        <table align="center" width="100%" border="0" cellspacing="1" bgcolor="#FFFFFF" cellpadding="1">
+                            <tr>
+                            <td bgcolor="#324697" align="center" colspan="2" class="white_medium">Scaled GIF Images (the test image is out logo)</td>
+                            </tr>
+                            <tr>
+
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/scale/scaledGifImage1.gif" alt="scaled by factor 0.7 gif image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/scale/scaledGifImage1_smooth.gif" alt="smoothly scaled by factor 0.7 gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+
+                            [0.7, -1]
+                            </td>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [0.7, -1, smoothly]
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/scale/scaledGifImage2.gif" alt="scaled by X factor 1.2 and Y factor 0.8 gif image using Java">
+                            </td>
+
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/scale/scaledGifImage2_smooth.gif" alt="smoothly scaled by X factor 1.2 and Y factor 0.8 gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [1.2, 0.8]
+                            </td>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+
+                            [1.2, 0.8, smoothly]
+                            </td>
+                            </tr>
+                        </table>
+                    </p>
+                    <br><br class="small">
+                    <a name="gifimagerotate"></a><h1 align="center">Gif4J PRO Java Example: Rotate a GIF image using GifTransformer</h1>
+                    <p>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;rotate&nbsp;gif&nbsp;image&nbsp;by&nbsp;45&nbsp;degrees&nbsp;(PI/4&nbsp;radians)</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;rotatedGifImage45&nbsp;=&nbsp;GifTransformer.rotate</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;Math.PI/</font><font color="#990000">4</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>false</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;same&nbsp;but&nbsp;smoothly</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;rotatedGifImage45_smooth&nbsp;=&nbsp;GifTransformer.rotate</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;Math.PI/</font><font color="#990000">4</font><font color="#000000">,</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;rotate&nbsp;gif&nbsp;image&nbsp;by&nbsp;90&nbsp;degrees&nbsp;counter-clockwise</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;rotatedGifImage90CCW&nbsp;=&nbsp;GifTransformer.rotate90Left</font><font color="#000000">(</font><font color="#000000">gifImage</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;rotate&nbsp;gif&nbsp;image&nbsp;by&nbsp;90&nbsp;degrees&nbsp;clockwise</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;rotatedGifImage90CW&nbsp;=&nbsp;GifTransformer.rotate90Right</font><font color="#000000">(</font><font color="#000000">gifImage</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;rotate&nbsp;gif&nbsp;image&nbsp;by&nbsp;180&nbsp;degrees</font><br/>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;rotatedGifImage180&nbsp;=&nbsp;GifTransformer.rotate180</font><font color="#000000">(</font><font color="#000000">gifImage</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <br class="small">
+                        <table align="center" width="100%" border="0" cellspacing="1" bgcolor="#FFFFFF" cellpadding="1">
+                            <tr>
+                            <td bgcolor="#324697" align="center" colspan="2" class="white_medium">Rotated GIF Images (the test image is out logo)</td>
+                            </tr>
+
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray" colspan="2">
+                            <img src="images/tutorial/javagiftransform/rotate/rotatedGifImage45.gif" alt="rotated by 45 degrees image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small" colspan="2">
+                            [45 degrees (PI/4 radians)]
+                            </td>
+
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray" colspan="2">
+                            <img src="images/tutorial/javagiftransform/rotate/rotatedGifImage45_smooth.gif" alt="smoothly rotated by 45 degrees image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small" colspan="2">
+                            [45 degrees (PI/4 radians), smooth]
+                            </td>
+
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray" width="50%">
+                            <img src="images/tutorial/javagiftransform/rotate/rotatedGifImage90CCW.gif" alt="rotated by 90 CCW degrees image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray" width="50%">
+                            <img src="images/tutorial/javagiftransform/rotate/rotatedGifImage90CW.gif" alt="rotated by 90 CW degrees image using Java">
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [90 degrees counter-clockwise]
+                            </td>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [90 degrees clockwise]
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray" colspan="2">
+
+                            <img src="images/tutorial/javagiftransform/rotate/rotatedGifImage180.gif" alt="rotated by 180 CCW degrees image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small" colspan="2">
+                            [180 degrees]
+                            </td>
+                            </tr>
+                        </table>
+
+                    </p>
+                    <br><br class="small">
+                    <a name="gifimageflip"></a><h1 align="center">Gif4J PRO Java Example: Flip a GIF image using GifTransformer</h1>
+                    <p>
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;flip&nbsp;gif&nbsp;image&nbsp;vertically</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;flipVerticalGifImage&nbsp;=&nbsp;GifTransformer.flipVertical</font><font color="#000000">(</font><font color="#000000">gifImage</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;flip&nbsp;gif&nbsp;image&nbsp;horizontally&nbsp;(mirror&nbsp;gif&nbsp;image)</font><br/>
+
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;flipHorizontalGifImage&nbsp;=&nbsp;GifTransformer.flipHorizontal</font><font color="#000000">(</font><font color="#000000">gifImage</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                        <br class="small">
+                        <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                        <br class="small">
+
+    <br class="small">
+                        <table align="center" width="100%" border="0" cellspacing="1" bgcolor="#FFFFFF" cellpadding="1">
+                            <tr>
+                            <td bgcolor="#324697" align="center" colspan="2" class="white_medium">Flip GIF Images (the test image is out logo)</td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/flip/flipVerticalGifImage.gif" alt="flip gif image vertically using Java">
+
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagiftransform/flip/flipHorizontalGifImage.gif" alt="flip gif image horizontally (mirror) using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [vertically]
+                            </td>
+
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [horizontally]
+                            </td>
+                            </tr>
+                        </table>
+                    </p>
+</td>
+</tr>
+</table>
+<br>
+
+
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+
+
+<br>
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">Encode and Save GIF Images. ImageIO support.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+    <a name="gifimagewrite"></a><h1 align="center">Encode and Save a GIF Image</h1>
+                    <p>
+                    The <a href="java-api-pro/com/gif4j/GifEncoder.html" target="_blank">GifEncoder</a> java class
+                    lets programmers encode and save images out to a file or output stream
+                    using the GIF file format (GIF89a version) with a single method call.
+                    The next methods to encode and save images as GIFs are available (please consult the <a href="java-api-pro/com/gif4j/GifEncoder.html" target="_blank">Gif4J PRO Java API</a> for more info):<br>
+
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">encode</font><font color="#000000">(</font><font color="#000000">BufferedImage&nbsp;image,&nbsp;DataOutput&nbsp;dataOutput</font><font color="#000000">)</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException;</font><br/>
+
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">encode</font><font color="#000000">(</font><font color="#000000">BufferedImage&nbsp;image,&nbsp;File&nbsp;output</font><font color="#000000">)</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException;</font><br/>
+
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">encode</font><font color="#000000">(</font><font color="#000000">BufferedImage&nbsp;image,&nbsp;OutputStream&nbsp;outputStream</font><font color="#000000">)</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException;</font><br/>
+
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">encode</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,&nbsp;File&nbsp;output</font><font color="#000000">)</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException;</font><br/>
+
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">encode</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,&nbsp;File&nbsp;output,</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">forceGlobalColorTableUsage</font><font color="#000000">)</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException;</font><br/>
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">encode</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,&nbsp;OutputStream&nbsp;outputStream</font><font color="#000000">)</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException;</font><br/>
+                    <br class="small">
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">encode</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,&nbsp;OutputStream&nbsp;outputStream,</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">forceGlobalColorTableUsage</font><font color="#000000">)</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException;</font><br/>
+                    <br class="small">
+                    <br class="small">
+                    The first three methods can be used to encode <span class="code">BufferedImage</span>(s) directly to non-animated (consists of one frame) gif image files.
+                    If the specified <span class="code">BufferedImage</span> contains more than 256 unique colors then it'll be automatically quantized using the Gif4J
+                    <a href="java-color-quantizer.htm" class="green" target="_blank">Java Color Quantizer</a>.<br>
+
+                    <br class="small">
+                    Parameter <b>forceGlobalColorTableUsage</b> forces <i>Global Color Table</i> use. If this parameter is set to true then
+                    <i>Local Color Tables</i> from all frames will be union to one <i>Global Color Table</i>.
+                    It's useful to optimize final image size (every <i>Local Color Table</i> takes up to 768 bytes).
+                    Especially this option is recommended to set for encoding gif images with a lot of internal frames
+                    (for example, after applying <a href="java-gif4j-pro-gif-image-morphing-filters.htm">Morphing Filters</a>).
+                    <br><br>
+
+                    <h2 align="center">Gif4J PRO Java Example: Save Image as a GIF to a file</h2>
+                    <br class="small">
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.ImageUtils;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifEncoder;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.Image;</font><br/>
+
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.image.BufferedImage;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.File;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.IOException;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#ffffff">&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+
+                    <font color="#ffffff"></font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;void&nbsp;</b></font><font color="#000000">saveImageAsGif</font><font color="#000000">(</font><font color="#000000">Image&nbsp;image,&nbsp;File&nbsp;fileToSave</font><font color="#000000">)&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException&nbsp;</font><font color="#000000">{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;convert&nbsp;Image&nbsp;to&nbsp;the&nbsp;BufferedImage</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">BufferedImage&nbsp;bufferedImage&nbsp;=&nbsp;ImageUtils.toBufferedImage</font><font color="#000000">(</font><font color="#000000">image</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;save&nbsp;image</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifEncoder.encode</font><font color="#000000">(</font><font color="#000000">bufferedImage,&nbsp;fileToSave</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                    <br class="small"><br class="small">
+                    <h2 align="center">Gif4J PRO Java Example: Save array of images as an animated GIF to a file</h2>
+                    <br class="small">
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifEncoder;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifFrame;</font><br/>
+
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifImage;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.image.BufferedImage;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.File;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.IOException;</font><br/>
+
+                    <font color="#ffffff"></font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;...</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">saveImageArrayAsAnimatedGif</font><font color="#000000">(</font><font color="#000000">BufferedImage</font><font color="#000000">[]&nbsp;</font><font color="#000000">images,&nbsp;File&nbsp;fileToSave</font><font color="#000000">)</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throws&nbsp;</b></font><font color="#000000">IOException&nbsp;</font><font color="#000000">{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;create&nbsp;new&nbsp;GifImage&nbsp;instance</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifImage&nbsp;gifImage&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">GifImage</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;set&nbsp;default&nbsp;delay&nbsp;between&nbsp;gif&nbsp;frames</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">gifImage.setDefaultDelay</font><font color="#000000">(</font><font color="#990000">500</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;add&nbsp;comment&nbsp;to&nbsp;gif&nbsp;image</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">gifImage.addComment</font><font color="#000000">(</font><font color="#2a00ff">&#34;Animated&nbsp;GIF&nbsp;image&nbsp;example&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;add&nbsp;images&nbsp;wrapped&nbsp;by&nbsp;GifFrame</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">i&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;i&nbsp;&lt;&nbsp;images.length;&nbsp;i++</font><font color="#000000">)</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">gifImage.addGifFrame</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">GifFrame</font><font color="#000000">(</font><font color="#000000">images</font><font color="#000000">[</font><font color="#000000">i</font><font color="#000000">]))</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;save&nbsp;animated&nbsp;gif&nbsp;image</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GifEncoder.encode</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;fileToSave</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+
+                    </p>
+                    <br>
+                    <a name="gifimagejavaimageio"></a><h1 align="center">Gif4J PRO for Java: Image I/O Support</h1>
+                    <p>
+                    You can find more infomation about the Java Image I/O API <a href="http://java.sun.com/j2se/1.4.2/docs/guide/imageio/spec/imageio_guideTOC.fm.html" target="_blank" class="green">here</a>.
+                    <br>Just one quotation: <i>"The Java Image I/O API provides a pluggable architecture for working with images stored in files and accessed across the network. It offers substantially more flexibility and power than the previously available APIs for loading and saving images."</i><br>
+                    <br class="small">
+
+                    To enable ImageIO support by the Gif4J PRO you just need to add library jar file to the <span class="code">CLASSPATH</span>.
+                    The Java Image I/O API should automatically resolve the Gif4J library as a plug-in, load the Gif4J service provider classes, and registers the Gif4J service provider instance.<br>
+                    <br class="small">The next code checks that the Gif4J PRO has been resolved correctly:<br><br>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Iterator&nbsp;iterator&nbsp;=&nbsp;ImageIO.getImageWritersByFormatName</font><font color="#000000">(</font><font color="#2a00ff">&#34;gif&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">iterator.hasNext</font><font color="#000000">())&nbsp;{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ImageWriter&nbsp;imageWriter&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">ImageWriter</font><font color="#000000">)&nbsp;</font><font color="#000000">iterator.next</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ImageWriterSpi&nbsp;spi&nbsp;=&nbsp;imageWriter.getOriginatingProvider</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;Vendor:&nbsp;&#34;</font><font color="#000000">+spi.getVendorName</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;Format&nbsp;description:&nbsp;&#34;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;imageWriter.getOriginatingProvider</font><font color="#000000">()</font><font color="#000000">.getDescription</font><font color="#000000">(</font><font color="#7f0055"><b>null</b></font><font color="#000000">)</font><font color="#000000">+</font><font color="#2a00ff">&#34;\n&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                    <br>
+
+                    The output should contain something like this:<br><br>
+                    <span class="code">
+                    Vendor: Gif4J Software, http://www.gif4j.com/<br>
+                    Format description: GRAPHICS INTERCHANGE FORMAT(sm) Version 89a
+                    </span>
+                    <br><br>
+                    If nothing has been found then you should call <span class="code">ImageIO.scanForPlugins()</span> method to force
+                    the ImageIO scans the application class path for plug-ins.<br>
+
+                    If the Gif4J service provider has been detected and loaded then an image Writing in the gif format is equally simple:<br><br>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">BufferedImage&nbsp;bi&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br/>
+                    <font color="#3f7f5f">//&nbsp;skip&nbsp;image&nbsp;initialization</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try&nbsp;</b></font><font color="#000000">{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;f&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#2a00ff">&#34;c:\\images\\myimage.gif&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ImageIO.write</font><font color="#000000">(</font><font color="#000000">bi,&nbsp;</font><font color="#2a00ff">&#34;gif&#34;</font><font color="#000000">,&nbsp;f</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>catch&nbsp;</b></font><font color="#000000">(</font><font color="#000000">IOException&nbsp;e</font><font color="#000000">)&nbsp;{</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                        </p>
+</td>
+</tr>
+</table>
+<br>
+
+
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+
+
+
+<br>
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">Constructing Watermarks and Applying them to Animated and Non-Animated GIF Images and their Frames.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+    <br class="small">
+                <a name="watermarkcreate"></a><h1 align="center">Construct a Watermark</h1>
+                    <p>
+                    The <a href="java-api-pro/com/gif4j/Watermark.html" target="_blank">Watermark</a> java class
+                    is used to prepare and apply (paint with the specified transparency) images as watermarks
+                    to the whole gif images, separate gif image frames and <code>BufferedImage</code>(-s).
+                    Absolute and relative (layout constraint based) positioning are supported.<br>
+
+                    <br class="small">
+                    The <a href="java-api-pro/com/gif4j/Watermark.html" target="_blank">Watermark</a> class
+                    constructors can be divided into 2 types according to the desired position type (absolute or relative):
+                    <i>"absolute positioning"</i> costructors contain <code><b>Point</b></code> parameter and
+                    <i>"relative positioning"</i> constructors contain <code><b>layout constraint</b></code> parameter.<br>
+
+                    Also you can specify watermark's <code><b>transparency</b></code> parameter which is represented by
+                    float value between 0 (absolutely transparent) and 1 (absolutely opaque). Default is 0.5f.<br>
+                    <br class="small">Below examples demostrate positioning and transparency opportunities (see <i>examples/Watermarks</i> and
+                    <i>examples/ImageTour1</i>):<br>
+                    <br class="small">
+                    <center>
+
+                    <img border="1" src="images/tutorial/WatermarksExample_relative_1.gif"><br>
+                                    (size: 150x150, 5 frames - each with different relative position and the last with "cover consecutively" watermark)<br><br>
+                    </center><br>
+                    <br class="small">
+                    <br class="small"><span class="text_red">Note</span>:
+                    If you load GIF images for displaying purposes (for example to display as image icons within a swing application)
+                    then you should use the standard Java API: <code>java.awt.Toolkit#getImage</code>, <code>java.awt.Toolkit#createImage</code>
+                    or <code>javax.swing.ImageIcon</code>.
+                    </p>
+
+                    <a name="bufferedimagewatermarkapply"></a><h1 align="center">Apply a Watermark to a BufferedImage</h1>
+                    <p>Below example demostrates creating and adding a text watermark to a <code>BufferedImage</code>:<br>
+                    <h2 align="center">Gif4J PRO Java Example: Add text watermark to a BufferedImage</h2>
+                    <br class="small">
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.Watermark;</font><br/>
+
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.TextPainter;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.image.BufferedImage;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.*;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">BufferedImage&nbsp;addTextWatermarkToImage</font><font color="#000000">(</font><font color="#000000">BufferedImage&nbsp;image,&nbsp;String&nbsp;text</font><font color="#000000">)&nbsp;{</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//create&nbsp;new&nbsp;TextPainter</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">TextPainter&nbsp;textPainter&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">TextPainter</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Font</font><font color="#000000">(</font><font color="#2a00ff">&#34;Verdana&#34;</font><font color="#000000">,&nbsp;Font.BOLD,&nbsp;</font><font color="#990000">10</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">textPainter.setOutlinePaint</font><font color="#000000">(</font><font color="#000000">Color.WHITE</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//render&nbsp;the&nbsp;specified&nbsp;text&nbsp;outlined</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">BufferedImage&nbsp;renderedWatermarkText&nbsp;=&nbsp;textPainter.renderString</font><font color="#000000">(</font><font color="#000000">text,true</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//create&nbsp;new&nbsp;Watermark</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Watermark&nbsp;watermark&nbsp;=</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Watermark</font><font color="#000000">(</font><font color="#000000">renderedWatermarkText,&nbsp;Watermark.LAYOUT_BOTTOM_RIGHT</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//apply&nbsp;watermark&nbsp;to&nbsp;the&nbsp;specified&nbsp;image&nbsp;and&nbsp;return&nbsp;the&nbsp;result</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">watermark.apply</font><font color="#000000">(</font><font color="#000000">image</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                    <br class="small">
+                    </p>
+                    <a name="gifimagewatermarkapply"></a><h1 align="center">Apply a Watermark to a GIF image</h1>
+                    <p>Below example demostrates creating and adding a text watermark to a <code>GifImage</code>:<br>
+                    <h2 align="center">Gif4J PRO Java Example: Add text watermark to a GifImage</h2>
+
+                    <br class="small">
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.Watermark;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.TextPainter;</font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">com.gif4j.GifImage;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.image.BufferedImage;</font><br/>
+
+                    <font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.*;</font><br/>
+                    <font color="#ffffff"></font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addTextWatermarkToGifImage</font><font color="#000000">(</font><font color="#000000">GifImage&nbsp;gifImage,&nbsp;String&nbsp;text</font><font color="#000000">)&nbsp;{</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//create&nbsp;new&nbsp;TextPainter</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">TextPainter&nbsp;textPainter&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">TextPainter</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Font</font><font color="#000000">(</font><font color="#2a00ff">&#34;Verdana&#34;</font><font color="#000000">,&nbsp;Font.BOLD,&nbsp;</font><font color="#990000">10</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">textPainter.setOutlinePaint</font><font color="#000000">(</font><font color="#000000">Color.WHITE</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//render&nbsp;the&nbsp;specified&nbsp;text&nbsp;outlined</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">BufferedImage&nbsp;renderedWatermarkText&nbsp;=&nbsp;textPainter.renderString</font><font color="#000000">(</font><font color="#000000">text,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//create&nbsp;new&nbsp;Watermark</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Watermark&nbsp;watermark&nbsp;=</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Watermark</font><font color="#000000">(</font><font color="#000000">renderedWatermarkText,&nbsp;Watermark.LAYOUT_BOTTOM_RIGHT</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//apply&nbsp;watermark&nbsp;to&nbsp;the&nbsp;specified&nbsp;gif&nbsp;image&nbsp;and&nbsp;return&nbsp;the&nbsp;result</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">watermark.apply</font><font color="#000000">(</font><font color="#000000">gifImage,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+                    <br class="small">
+                        <table align="center" width="100%" border="0" cellspacing="1" bgcolor="#FFFFFF" cellpadding="1">
+                            <tr>
+                            <td bgcolor="#324697" align="center" colspan="2" class="white_medium">Watermarked GIF Images (the test image is out logo)</td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+
+                            <img src="images/tutorial/javagifwatermark/watermarked_1.gif" alt="watermarked left-top gif image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagifwatermark/watermarked_2.gif" alt="watermarked top-center gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_TOP_LEFT, 0.7f transparency]
+                            </td>
+
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_TOP_CENTER, 0.7f transparency]
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagifwatermark/watermarked_3.gif" alt="watermarked right-top gif image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+
+                            <img src="images/tutorial/javagifwatermark/watermarked_4.gif" alt="watermarked middle-left gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_TOP_RIGHT, 0.7f transparency]
+                            </td>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_MIDDLE_LEFT, 0.7f transparency]
+                            </td>
+
+                            </tr>
+                            <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagifwatermark/watermarked_5.gif" alt="watermarked middle-center gif image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagifwatermark/watermarked_6.gif" alt="watermarked middle-right gif image using Java">
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_MIDDLE_CENTER, 0.7f transparency]
+                            </td>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_MIDDLE_RIGHT, 0.7f transparency]
+                            </td>
+                            </tr>
+                                                        <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+
+                            <img src="images/tutorial/javagifwatermark/watermarked_7.gif" alt="watermarked botom-left gif image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagifwatermark/watermarked_8.gif" alt="watermarked bottom-center gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_BOTTOM_LEFT, 0.7f transparency]
+                            </td>
+
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_BOTTOM_CENTER, 0.7f transparency]
+                            </td>
+                            </tr>
+                                                        <tr>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+                            <img src="images/tutorial/javagifwatermark/watermarked_9.gif" alt="watermarked right-bottom gif image using Java">
+                            </td>
+                            <td bgcolor="#FFFFFF" align="center" class="dark_gray">
+
+                            <img src="images/tutorial/javagifwatermark/watermarked_10.gif" alt="watermarked consecutively gif image using Java">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_BOTTOM_RIGHT, 0.7f transparency]
+                            </td>
+                            <td bgcolor="#F0F0F0" align="center" class="dark_gray_small">
+                            [LAYOUT_COVER_CONSECUTIVELY, 0.3f transparency]
+                            </td>
+
+                            </tr>
+                        </table>
+                        <br class="small">
+                    </p>
+                    <a name="gifframewatermarkapply"></a><h1 align="center">Apply a Watermark to a separate GIF Image Frame</h1>
+                    <p>
+                    To apply watermark(s) to the specified frame you should add this frame to a gif image using the next methods:<br>
+                    <br class="small">
+
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame,&nbsp;Watermark&nbsp;watermark</font><font color="#000000">)&nbsp;</font><br/>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame,&nbsp;MorphingFilter&nbsp;filter,&nbsp;Watermark&nbsp;watermark</font><font color="#000000">)&nbsp;</font><br/>
+
+                    <br>
+                    <center>
+                    <img border="1" src="images/tutorial/ImageTourExample1.gif"><br>
+                                    (size: 160x120, animated gif image tour with separately watermarked frames)<br>
+                    <br class="small">
+                    </center>
+                    </p>
+</td>
+</tr>
+</table>
+<br>
+
+
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+
+
+
+<br>
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">GIF Image Morphing Filters</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+ <a name="morphingfilters"></a><h1 align="center">GIF Image Morphing Filters</h1>
+                 <p>
+                Morphing filters are the unique feature of the Gif4J PRO which lets you to create amazing GIF animations, image tours and banners without any additional coding.
+                There are 7 base morphing filters with more than 20 morphing options. To apply the specified filter to a gif frame
+                you just need to create an instance (or use already created - you can apply one filter's instance to any number of gif frames)
+                of the selected filter (please consult <a href="java-api-pro/com/gif4j/MorphingFilter.html" target="_blank">Morphing Filters Java API</a> for more information) and add a <a href="java-api-pro/com/gif4j/GifFrame.html" target="_blank">GifFrame</a>  to a <a href="java-api-pro/com/gif4j/GifImage.html" target="_blank">GifImage</a> using one of the next methods:<br><br>
+
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame,&nbsp;MorphingFilter&nbsp;filter</font><font color="#000000">)&nbsp;</font><br/>
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">GifImage&nbsp;addGifFrame</font><font color="#000000">(</font><font color="#000000">GifFrame&nbsp;frame,&nbsp;MorphingFilter&nbsp;filter,&nbsp;Watermark&nbsp;watermark</font><font color="#000000">)&nbsp;</font><br/>
+
+                 <br>
+                Below examples demostrate morphing filters in action (see <i>examples/MorphingFilters</i> and
+                <i>examples/MorphingImageTours</i>):<br>
+                <center>
+                <table width="80%" border="0" cellspacing="5" bgcolor="ffffff" cellpadding="0" align="center">
+                <tr align="center">
+                <td class="dark_gray">
+
+                <img border="1" src="images/tutorial/MorphingFiltersExample_cell_filter.gif"><br>
+                                (CellFilter)
+                </td>
+                <td class="dark_gray">
+                <img border="1" src="images/tutorial/MorphingFiltersExample_curtain_filter.gif"><br>
+                                (CurtainFilter)
+                </td>
+                </tr>
+                <tr align="center">
+                <td class="dark_gray">
+
+                <img border="1" src="images/tutorial/MorphingFiltersExample_mill_filter.gif"><br>
+                                (MillFilter)
+                </td>
+                <td class="dark_gray">
+                <img border="1" src="images/tutorial/MorphingFiltersExample_radar_filter.gif "><br>
+                                (RadarFilter)
+                </td>
+                </tr>
+                <tr align="center">
+                <td class="dark_gray">
+
+                <img border="1" src="images/tutorial/MorphingFiltersExample_mozaic_filter.gif"><br>
+                                (MozaicFilter)
+                </td>
+                <td class="dark_gray">
+                <img border="1" src="images/tutorial/MorphingFiltersExample_tunnel_filter.gif"><br>
+                                (TunnelFilter)
+               </td>
+               </tr>
+                   <tr align="center">
+                <td class="dark_gray" colspan=2>
+
+                <img border="1" src="images/tutorial/MorphingFiltersExample_snake_filter.gif"><br>
+                                (SnakeFilter)
+                </td>
+                </tr>
+                </table>
+                <br>
+                <img border="1" src="images/tutorial/MorphingImageToursExample_cell_curtain_filtered.gif"><br>
+                                (Cell and Curtain filters have been used)<br><br>
+                <img border="1" src="images/tutorial/MorphingImageToursExample_mill_mozaic_tunnel_filtered.gif"><br>
+
+                                (Mill, Mozaic and Tunnel filters have been used)<br><br>
+                <img border="1" src="images/tutorial/MorphingImageToursExample_snake_filtered.gif "><br>
+                                (Snake filter with different options has been used)<br><br>
+                </center>
+                <span class="text_red">Note</span>: For every filter you can specify 'delay time between frames' parameter (in 1/100 seconds).
+                Default delay is equal to 10. To do a gif animation smoother please specify this parameter small but note that some gif viewers and
+                browsers (including Microsoft IE) can ignore very small delay between frames. Experience has shown that, for example,
+                Microsoft Internet Explorer ignores delay between frames less than 6 and in this case uses own default delay. So if you want to get the fastest gif animation then set the delay to 6.<br>
+                <br class="small">
+                <span class="text_red">Note</span>: Morphing filtering is based on fragmentation one gif frame to several and it increases
+                the total number of gif frames greatly. As you know by default every output gif frame has own local color table which can take up to 768 bytes
+                in the result file. To prevent this process encode the GifImage with <b>"force global color table usage"</b> option
+                (see <a href="java-api-pro/com/gif4j/GifEncoder.html" class="green" target="_blank">GifEncoder</a> class API for more information).
+                <br><br class="small">
+
+                </p>
+</td>
+</tr>
+</table>
+<br>
+
+
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+
+
+
+<br>
+<table cellspacing="1" cellpadding="5" border="0" align="center" bgcolor="#324697">
+<tr>
+<td bgcolor="#324697" align="center"class="white_large">Text Rendering</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" class="dark_gray">
+
+         <a name="textrendering"></a><h1 align="center">Text Rendering</h1>
+                    <p>
+                    The <a href="java-api-pro/com/gif4j/TextPainter.html" target="_blank">TextPainter</a> java class
+                    is intended for drawing a text across the single or multiple lines on the <span class='code'>BufferedImage</span>(s).
+                    It can be very convenient for adding some text information to images, creation text-based watermarks etc.<br>
+
+                    <br class="small">The <code>TextPainter</code> class in its basis uses Java 2D lays and supports some Java 2D API concepts such as Paint etc.<br>
+                    <br class="small">This java class actually represents a small superstructure above Java2D and uses only a small part of Java2D functionality.<br>
+                    <br class="small">The <code>TextPainter</code> context contains the next attributes: font (instance of <i>java.awt.Font</i>),
+                    foreground paint (instance of <i>java.awt.Color</i>, <i>java.awt.GradientPaint</i> or <i>java.awt.TexturePaint</i>),
+                    backgroung color (instance of <i>java.awt.Color</i>),
+                    outline paint (instance of <i>java.awt.Color</i>, <i>java.awt.GradientPaint</i> or <i>java.awt.TexturePaint</i>)
+                    and antialiasing (on/off).<br>
+
+                    <br class="small">You can get and set these attributes using the corresponding constructors and getter/setter methods.
+                    There are 2 main rendering methods (please consult <a href="java-api-pro/com/gif4j/TextPainter.html" target="_blank">TextPainter Java API</a> for more options):<br><br class="small">
+                    <font color="#ffffff">&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">BufferedImage&nbsp;renderString</font><font color="#000000">(</font><font color="#000000">String&nbsp;str</font><font color="#000000">);</font><br/>
+                    <br class="small">
+
+                    <font color="#ffffff">&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">BufferedImage&nbsp;renderText</font><font color="#000000">(</font><font color="#000000">String&nbsp;text,&nbsp;</font><br>
+                    <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">width,&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">outline,&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">centralized</font><font color="#000000">);</font><br/>
+
+                    <br class="small">
+                    The first method renders single string using the specified attributes from the <span class='code'>TextPainter</span> context.
+                    Size of the returned <span class='code'>BufferedImage</span> object is equal to visual bounds of the specified string to render.<br>
+                    The second method renders line-wraped to the specified width text using the specified attributes from the <span class='code'>TextPainter</span> context.
+                    Width of the returned <span class='code'>BufferedImage</span> object is equal to the specified width. Height is automatically extended to contain all text lines.
+                    Below examples demostrate some TextPainter features (see <i>examples/TextRendering</i>,
+                     <i>examples/TextBanner</i>, <i>examples/ProductIcon1</i> and <i>examples/ProductIcon2</i>):<br>
+
+                    <center>
+                    <img border="0" src="images/tutorial/TextRenderingExample_str1.gif"><br><br>
+                    <img border="0" src="images/tutorial/TextRenderingExample_str2.gif"><br><br>
+                    <img border="0" src="images/tutorial/TextRenderingExample_str3.gif"><br><br>
+                    <img border="0" src="images/tutorial/TextRenderingExample_str4.gif"><br><br>
+                    <img border="0" src="images/tutorial/TextRenderingExample_str5.gif"><br><br>
+                    <table width="80%" border="0" cellspacing="5" bgcolor="ffffff" cellpadding="0" align="center">
+                    <tr align="center">
+                    <td class="dark_gray">
+
+                    <img border="0" src="images/tutorial/TextRenderingExample_text1.gif">
+                    </td>
+                    <td class="dark_gray">
+                    <img border="0" src="images/tutorial/TextRenderingExample_text2.gif">
+                    </td>
+                    </tr>
+                    <tr align="center">
+                    <td class="dark_gray">
+                    <img border="0" src="images/tutorial/TextRenderingExample_text3.gif">
+
+                    </td>
+                    <td class="dark_gray">
+                    <img border="0" src="images/tutorial/TextRenderingExample_text4.gif">
+                    </td>
+                    </tr>
+                    <tr align="center">
+                    <td class="dark_gray">
+                    <img border="0" src="images/tutorial/ProductIconExample1.gif">
+                    </td>
+
+                    <td class="dark_gray">
+                    <img border="0" src="images/tutorial/ProductIconExample2.gif">
+                    </td>
+                    </tr>
+                    </table><br>
+                    <img border="0" src="images/tutorial/TextBannerExample.gif"><br><br>
+                    </center><br><br>
+                    <span class="text_red">Hint</span>: To render outlined text with better quality use <span class="code">BOLD</span> font instances.<br>
+
+                    <br>
+                     <span class="text_red">Hint</span>: It is no secret that any published on a site text information
+                     are not protected and can be easily grabbed by special scripts or even by copy/paste.
+                     <b>You can prevent the grabbing of any privacy information (passwords, e-mails, price lists,
+                     financial reports etc.) by publishing such information as gif images</b>.
+                     With the help of the Gif4J PRO for Java such functionality can be added easily for short time.
+                    <br><br>
+                    <span class="text_red">Note</span>: Sometimes you can get ugly rendered text on the other platform
+                    while on your own platform text is rendered well.
+                    Such problems are usually connected with failing one or another font.
+                    You can get all supported fonts on the exact platform by calling <span class="code">getAllFonts()</span>
+                     method of the <span class="code">GraphicsEnvironment</span> class:<br><br>
+
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">GraphicsEnvironment&nbsp;ge&nbsp;=&nbsp;GraphicsEnvironment.getLocalGraphicsEnvironment</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+
+                <font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Font</font><font color="#000000">[]&nbsp;</font><font color="#000000">allfonts&nbsp;=&nbsp;ge.getAllFonts</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+                    </p>
+</td>
+</tr>
+</table>
+<br>
+<center><h4>[<a class="large" href="#content">CONTENT</a>]</h4></center>
+<br>
+<table cellspacing="0" cellpadding="5" border="0" align="center" width="100%" >
+<tr>
+<td bgcolor="#324697" align="center"class="white_medium" width="100%" >Gif4J PRO (Copyright &copy; 2004-2007 Gif4J Software)</td>
+</tr>
+</table>
+
+</body>

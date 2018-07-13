@@ -1,0 +1,22 @@
+1. Don't trust popular image viewers! Some of them don't display animated gif images properly. Try to open produced gif images with more then one image viewer or in an internet browser (Internet Explorer etc.)
+
+2. Don't forget about  the differences between trial (evaluation) and full versions:
+
+	a) Every output gif image is marked with "gif4j eval" watermark.
+
+	b) The Quantizer supports only MEMORY_LOW_OPTIMIZED mode. 
+	All others modes are ignored.
+	
+	c) The trial version is not profiled to the speed and memory use. The embedded 
+	object pool system (to optimize memory use and prevent often GC running) 
+	and other optimization oriented classes are removed. 
+	As a result the number of classes in the trial version was reduced almost twice 
+	that evidently demostrates how much attention has been paid to optimization. 
+	Experience has shown that the trial version is usually up to 10 times 
+	(and sometimes up to 100 times) slower than the registered version.
+	
+	d) The GifEncoder class ignores the 'forceGlobalColorTableUsage' option. 
+	It can lead to the large gif file size if it contains a lot of internal frames.
+
+3. To compare the trial and full versions you can download http://www.gif4j.com/trial/producedbyfullversion.zip archive 
+that contains gif images which were produced by the same examples but using the full Gif4J PRO version.
