@@ -5,40 +5,29 @@
 target/
 logs/
 *.log
-*.class
 .settings/
-target/
 .idea/
-.idea/*
 .svn/
 .svn-base
-logs/
 .classpath
 .project
-*.iml
-*.log
 .DS_Store
 .out
 
 
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+!chromedriver.exe
+!geckodriver.exe
 
 ### STS ###
 .apt_generated
-.classpath
 .factorypath
-.project
 .settings
 .springBeans
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-workspace.xml
 
 ### NetBeans ###
 /nbproject/private/
