@@ -1,12 +1,8 @@
 package com.jiahangchun.model;
 
-
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,15 +10,14 @@ import java.util.Date;
 
 /**
  * @Author: jiahangchun
- * @Description:
+ * @Description: 相当于目录的作用
  * @Date: 2018/7/15
  * @Location: BranchController com.jiahangchun.model
  */
 @Entity
-@Table(name="resource_info")
+@Table(name="catalog_entity")
 @Data
-public class ResourceInfo implements Serializable {
-
+public class CatalogEntity  implements Serializable {
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,14 +32,11 @@ public class ResourceInfo implements Serializable {
     @Column(name="category_id")
     private Long categoryId;
 
-    @Column(name="catalog_entity_id")
-    private Long catalogEntityId;
+    @Column(name="name")
+    private String name;
 
-    @Column(name="title")
-    private String title;
-
-    @Column(name="content")
-    private String content;
+    @Column(name="description")
+    private String description;
 
     @Column(name="delete_mark")
     private Long deleteMark;
@@ -59,5 +51,4 @@ public class ResourceInfo implements Serializable {
     @Column(name="gmt_update")
     @LastModifiedDate
     private Date gmtUpdate;
-
 }

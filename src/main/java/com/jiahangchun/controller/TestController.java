@@ -1,6 +1,7 @@
 package com.jiahangchun.controller;
 
 import com.jiahangchun.dao.ResourceInfoRepository;
+import com.jiahangchun.manager.NovelManager;
 import com.jiahangchun.model.ResourceInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,8 @@ public class TestController {
 
     @Autowired
     private ResourceInfoRepository resourceInfoRepository;
+    @Autowired
+    private NovelManager novelManager;
 
     @RequestMapping("queryAll")
     @ResponseBody
@@ -28,6 +31,25 @@ public class TestController {
         List<ResourceInfo> list = new ArrayList<ResourceInfo>();
         list = resourceInfoRepository.findAll();
         return list;
+    }
+
+    @RequestMapping("save")
+    @ResponseBody
+    public Boolean save(){
+        ResourceInfo resourceInfo =new ResourceInfo();
+        resourceInfo.setContent("中文乱码问题");
+        resourceInfo.setTitle("title");
+        ResourceInfo responseResult= resourceInfoRepository.save(resourceInfo);
+        System.out.println(responseResult.getId());
+        return Boolean.TRUE;
+    }
+
+
+    @RequestMapping("/novels")
+    @ResponseBody
+    public Boolean downloadNovel(){
+        novelManager.download();
+        return true;
     }
 
 

@@ -1,15 +1,10 @@
 package com.jiahangchun.model;
 
-
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -19,32 +14,13 @@ import java.util.Date;
  * @Location: BranchController com.jiahangchun.model
  */
 @Entity
-@Table(name="resource_info")
+@Table(name="exception_info")
 @Data
-public class ResourceInfo implements Serializable {
-
+public class ExceptionInfo {
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name="source_url")
-    private String sourceUrl;
-
-    @Column(name="type")
-    private Long type;
-
-    @Column(name="category_id")
-    private Long categoryId;
-
-    @Column(name="catalog_entity_id")
-    private Long catalogEntityId;
-
-    @Column(name="title")
-    private String title;
-
-    @Column(name="content")
-    private String content;
 
     @Column(name="delete_mark")
     private Long deleteMark;
@@ -60,4 +36,15 @@ public class ResourceInfo implements Serializable {
     @LastModifiedDate
     private Date gmtUpdate;
 
+    @Column(name="reason")
+    private String reason;
+
+    @Column(name="type")
+    private long type;
+
+    @Column(name="check_status")
+    private Long checkStatus;
+
+    @Column(name="param")
+    private String param;
 }

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Author: jiahangchun
  * @Description: http://www.biqugexsw.com/paihangbang/ 排行榜
- * @Date: 2018/7/14 缺少进度显示 & 多线程 & 代码结构调整 & mysql & 异常处理 & 定时任务
+ * @Date: 2018/7/14 缺少进度显示 & 多线程 & 代码结构调整 & mysql & 异常处理 & 定时任务 & 异常记录表
  * @Location: BranchController com.jiahangchun.demo.novel
  */
 @Log4j2
@@ -61,6 +61,11 @@ public class biquge {
                     hrefElement.click();
                     WebElement contentElement = driver.findElement(By.id("content"));
                     String content = contentElement.getText();
+
+                    WebElement allElement = driver.findElement(By.cssSelector(".content"));
+                    WebElement titleElement = allElement.findElement(By.tagName("h1"));
+                    String title = titleElement.getText();
+
                     //对内容的处理
                     System.out.println(content);
                     driver.navigate().back();
