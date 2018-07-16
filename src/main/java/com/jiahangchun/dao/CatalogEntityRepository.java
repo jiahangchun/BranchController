@@ -12,7 +12,7 @@ import java.util.List;
  * @Date: 2018/7/15
  * @Location: BranchController com.jiahangchun.dao
  */
-public interface CatalogEntityRepository extends JpaRepository<CatalogEntity,String> {
+public interface CatalogEntityRepository extends JpaRepository<CatalogEntity,Long> {
 
      public List<CatalogEntity> findByNameIsLikeAndSourceUrlEquals(String name,String sourceUrl);
 }

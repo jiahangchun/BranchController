@@ -14,7 +14,7 @@ import java.util.List;
  * @Location: BranchController com.jiahangchun.dao
  */
 @Transactional
-public interface ExceptionInfoRepository  extends JpaRepository<ExceptionInfo,String> {
+public interface ExceptionInfoRepository  extends JpaRepository<ExceptionInfo,Long> {
 
     public Integer deleteAllByParam(String param);
 
