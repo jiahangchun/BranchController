@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: jiahangchun
- * @Description:
+ * @Description: 缺少更新
  * @Date: 2018/7/15
  * @Location: BranchController com.jiahangchun.manager.impl
  */
@@ -44,6 +44,8 @@ public class NovelManagerImpl implements NovelManager{
     private CatalogEntityRepository catalogEntityRepository;
 
     private static final String novelListsUrl="http://www.biqugexsw.com/paihangbang/";
+    //由于数据库唯一性导致的问题
+    private static final String UNIQUE_STR="SQL";
 
     @Override
     @Async
@@ -64,11 +66,15 @@ public class NovelManagerImpl implements NovelManager{
             WebElement listElement = driver.findElement(By.cssSelector(".wrap.rank"));
             List<WebElement> novelsElements = listElement.findElements(By.tagName("li"));
             List<String> novelsList = new ArrayList<>();
+            List<String> performedNovelsList=new ArrayList<>();
             for (WebElement novelElement : novelsElements) {
                 WebElement novelHref = novelElement.findElement(By.tagName("a"));
                 String href = novelHref.getAttribute("href");
-                novelsList.add(href.replace("http://www.biqugexsw.com", ""));
+                String actualNovelHref=href.replace("http://www.biqugexsw.com", "");
+                novelsList.add(actualNovelHref);
             }
+
+
 
             for (String novelHrefStr : novelsList) {
                 String novelXpathStr = "//a[@href='" + novelHrefStr + "']";
@@ -98,6 +104,16 @@ public class NovelManagerImpl implements NovelManager{
                     WebElement novelTitleElement=coverElement.findElement(By.tagName("h2"));
                     String novelName=novelTitleElement.getText();
 
+                    //是否重复
+                    List<CatalogEntity> queryCatalogEntity=catalogEntityRepository.findByNameIsLikeAndSourceUrlEquals(novelName,novelListsUrl);
+                    if(null!=queryCatalogEntity && queryCatalogEntity.size()>0){
+                        performedNovelsList.add(novelHrefStr);
+                        driver.navigate().back();
+                        driver.navigate().refresh();
+                        continue;
+                    }
+
+                    //数据库记录
                     CatalogEntity catalogEntity=new CatalogEntity();
                     catalogEntity.setName(novelName);
                     catalogEntity.setSourceUrl(novelListsUrl);
@@ -135,31 +151,45 @@ public class NovelManagerImpl implements NovelManager{
                             resourceInfo.setType(ResourceEnum.NOVEL_BIQUGE.getValue());
                             resourceInfoRepository.saveAndFlush(resourceInfo);
                         } catch (Exception e) {
+                            String error=JsonUtil.toJson(xpathStr);
                             log.error("查询小说内容出错 :{} 当前查询内容页： {} " , e.getMessage() , JsonUtil.toJson(xpathStr));
-                            ExceptionInfo exceptionInfo=new ExceptionInfo();
-                            exceptionInfo.setParam(xpathStr);
-                            exceptionInfo.setReason(e.getMessage());
-                            exceptionInfo.setType(ExceptionInfoTypeEnum.NOVEL_BIQUGE_CONTENT_EXCEPTION.getValue());
-                            exceptionInfoRepository.save(exceptionInfo);
+                            if(error.contains(UNIQUE_STR)) {
+                                log.error("数据库唯一性错误,{}" ,e.getMessage());
+                            }else {
+                                ExceptionInfo exceptionInfo = new ExceptionInfo();
+                                exceptionInfo.setParam(xpathStr);
+                                exceptionInfo.setReason(e.getMessage());
+                                exceptionInfo.setType(ExceptionInfoTypeEnum.NOVEL_BIQUGE_CONTENT_EXCEPTION.getValue());
+                                exceptionInfoRepository.save(exceptionInfo);
+                            }
                         }finally {
                             driver.navigate().back();
                             driver.navigate().refresh();
                         }
                     }
+                    //返回到排序页面
                     driver.navigate().back();
                     driver.navigate().refresh();
-                    //返回到排序页面
                     hrefLists.clear();
                 }catch (Exception e){
-                    log.error("查找某本小说的列表出错：{} 当前查询小说 ： {}",e.getMessage(),JsonUtil.toJson(novelXpathStr));
-                    ExceptionInfo exceptionInfo=new ExceptionInfo();
-                    exceptionInfo.setParam(novelXpathStr);
-                    exceptionInfo.setReason(e.getMessage());
-                    exceptionInfo.setType(ExceptionInfoTypeEnum.NOVEL_BIQUGE_CATEGORY_EXCEPTION.getValue());
-                    exceptionInfoRepository.save(exceptionInfo);
+                    String error=JsonUtil.toJson(novelXpathStr);
+                    log.error("查找某本小说的列表出错：{} 当前查询小说 ： {}",e.getMessage(),error);
+                    if(error.contains(UNIQUE_STR)) {
+                        log.error("数据库唯一性错误,{}" ,e.getMessage());
+                    }else {
+                        ExceptionInfo exceptionInfo = new ExceptionInfo();
+                        exceptionInfo.setParam(novelXpathStr);
+                        exceptionInfo.setReason(e.getMessage());
+                        exceptionInfo.setType(ExceptionInfoTypeEnum.NOVEL_BIQUGE_CATEGORY_EXCEPTION.getValue());
+                        exceptionInfoRepository.save(exceptionInfo);
+                    }
+                }finally {
+                    performedNovelsList.add(novelHrefStr);
                 }
             }
-            novelsList.clear();
+            novelsList.removeAll(performedNovelsList);
+            if(!novelsList.isEmpty())
+                this.download();
         } catch (Exception e) {
             log.error(e.getMessage());
         } finally {

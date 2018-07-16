@@ -4,6 +4,8 @@ import com.jiahangchun.model.CatalogEntity;
 import com.jiahangchun.model.ResourceInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  * @Author: jiahangchun
  * @Description:
@@ -11,4 +13,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Location: BranchController com.jiahangchun.dao
  */
 public interface CatalogEntityRepository extends JpaRepository<CatalogEntity,String> {
+
+     public List<CatalogEntity> findByNameIsLikeAndSourceUrlEquals(String name,String sourceUrl);
 }
