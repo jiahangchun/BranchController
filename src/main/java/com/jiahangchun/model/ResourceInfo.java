@@ -21,6 +21,7 @@ import java.util.Date;
 @Entity
 @Table(name="resource_info")
 @Data
+@EntityListeners(AuditingEntityListener.class)
 public class ResourceInfo implements Serializable {
 
     @Id

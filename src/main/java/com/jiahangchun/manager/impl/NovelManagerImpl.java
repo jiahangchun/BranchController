@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: jiahangchun
- * @Description: 缺少更新
+ * @Description: 缺少更新 & 获取某本小说的章节列表的全部内容没有被加载到
  * @Date: 2018/7/15
  * @Location: BranchController com.jiahangchun.manager.impl
  */

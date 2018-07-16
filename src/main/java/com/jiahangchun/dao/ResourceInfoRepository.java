@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date: 2018/7/15
  * @Location: BranchController com.jiahangchun.dao
  */
-public interface ResourceInfoRepository extends JpaRepository<ResourceInfo,String> {
+public interface ResourceInfoRepository extends JpaRepository<ResourceInfo,Long> {
 }

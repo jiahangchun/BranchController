@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Author: jiahangchun
@@ -69,6 +70,17 @@ public class TestController {
         resourceInfo.setContent("中文乱码问题");
         resourceInfo.setTitle("title");
         ResourceInfo responseResult = resourceInfoRepository.save(resourceInfo);
+        System.out.println(responseResult.getId());
+        return Boolean.TRUE;
+    }
+
+    @RequestMapping("update")
+    @ResponseBody
+    public Boolean update(@RequestParam("id") Long id) {
+        Optional<ResourceInfo> resourceInfoOptional =resourceInfoRepository.findById(id);
+        ResourceInfo resourceInfo=resourceInfoOptional.get();
+        resourceInfo.setContent("中文乱码问题 Update");
+        ResourceInfo responseResult = resourceInfoRepository.saveAndFlush(resourceInfo);
         System.out.println(responseResult.getId());
         return Boolean.TRUE;
     }
