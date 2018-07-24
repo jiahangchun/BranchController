@@ -56,6 +56,10 @@ public class TestMockMvc {
     }
 
 
+    /**
+     * 这是将所有分散的文档组合成一个整体文档的方法
+     * @throws IOException
+     */
     @Test
     public void adocBuild() throws IOException {
         String appDir = System.getProperty("user.dir");
@@ -75,8 +79,6 @@ public class TestMockMvc {
             content.append(System.getProperty("line.separator"));
 
         }
-//		System.out.println(adocPath);
-//		System.out.println(content);
         File file = new File(adocPath);
         writeStringToFile(file, content.toString(), "UTF-8");
     }

@@ -3,8 +3,9 @@
 * mvn package -> generated docs
 
 # TODO
-* 左边的table
-* 每个不同页面之间的变化
+* ~~左边的table~~
+* ~~每个不同页面之间的变化~~
+* 权限
 
 # 参考资料
 [官方文档](https://docs.spring.io/spring-restdocs/docs/current/reference/html5/#documentating-your-api-parameterized-output-directories)  
