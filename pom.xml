@@ -22,7 +22,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
+        <java.version>1.8</java.version><!--以后自己的项目都用1。8-->
+        <spring-restdocs.version>2.0.3.BUILD-SNAPSHOT</spring-restdocs.version>
     </properties>
 
     <dependencies>
@@ -87,6 +88,14 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring snapshots</name>
+            <url>https://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -104,9 +113,37 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!--指定测试时候执行那个方法-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/*MockMvc.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>1.5.3</version>
+                <!-- Configure generic document generation settings -->
+                <configuration>
+                    <sourceDirectory>${project.basedir}/src/docs/asciidoc</sourceDirectory>
+                    <sourceDocumentName>index.adoc</sourceDocumentName>
+                    <attributes>
+                        <doctype>book</doctype>
+                        <toc>left</toc>
+                        <toclevels>3</toclevels>
+                        <numbered></numbered>
+                        <hardbreaks></hardbreaks>
+                        <sectlinks></sectlinks>
+                        <sectanchors></sectanchors>
+                        <generated>${project.build.directory}/asciidoc</generated>
+                        <snippets>${project.build.directory}/snippets</snippets>
+                    </attributes>
+                </configuration>
                 <executions>
                     <execution>
                         <id>generate-docs</id>
@@ -115,16 +152,12 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDocumentName>index.adoc</sourceDocumentName>
                             <backend>html</backend>
-                            <attributes>
-                                <!-- 这里指定文档生成的位置/target/snippets -->
-                                <snippets>${project.build.directory}/snippets</snippets>
-                            </attributes>
+                            <doctype>book</doctype>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin><!-- mvn生成文档的插件 -->
+            </plugin>
         </plugins>
     </build>
 </project>
