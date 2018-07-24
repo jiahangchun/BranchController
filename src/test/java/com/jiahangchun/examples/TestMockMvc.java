@@ -9,8 +9,15 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
+import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
+import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.hamcrest.Matchers.containsString;
@@ -37,5 +44,56 @@ public class TestMockMvc {
                 andDo(document("home"));//生成http文档的位置target/snippets/home下面
     }
 
+//    @Test
+//    public void shouldReturnDefaultMessage2() throws Exception {
+//        this.mockMvc.perform(get("/2")).
+//                andDo(print()).
+//                andExpect(status().isOk()).
+//                andExpect(content().string(containsString("Hello, World"))).
+//                andDo(document("{class_name}/{method_name}"));//生成http文档的位置target/snippets/home下面
+//    }
+
+
+//    @Test
+//    public void adocBuild() throws IOException {
+//        String appDir = System.getProperty("user.dir");
+//        String adocPath = appDir + "//src//docs//asciidoc//hello.adoc";
+//        StringBuilder content = new StringBuilder();
+//        content.append("include::" + appDir + "//src//docs//asciidoc//preview.adoc[]").append(System.getProperty("line.separator")).append(System.getProperty("line.separator"));
+//        File apidirs = new File(appDir + "//target//snippets//home");
+//        for (File apidir : apidirs.listFiles()) {
+//            String apiName = apidir.getName();
+//            content.append("== " + apiName + System.getProperty("line.separator"));
+//            fileAppend(content, apidir.getAbsolutePath(), ".http-request");
+//            fileAppend(content, apidir.getAbsolutePath() , ".request-headers 请求头说明");
+//            fileAppend(content, apidir.getAbsolutePath(), ".request-parameters 请求参数说明");
+//            fileAppend(content, apidir.getAbsolutePath() , ".request-body 请求体说明");
+//            fileAppend(content, apidir.getAbsolutePath(), ".http-response");
+//            fileAppend(content, apidir.getAbsolutePath() , ".response-fields 返回值说明");
+//            content.append(System.getProperty("line.separator"));
+//        }
+////		System.out.println(adocPath);
+////		System.out.println(content);
+//        File file = new File(adocPath);
+//        writeStringToFile(file, content.toString(), "UTF-8");
+//    }
+//
+//    private void writeStringToFile(File file, String content, String character) throws IOException {
+//        if (!file.exists()) {
+//            file.createNewFile();
+//        }
+//        FileOutputStream fos = new FileOutputStream(file);
+//        OutputStreamWriter osw = new OutputStreamWriter(fos, character);
+//        osw.write(content);
+//        osw.flush();
+//    }
+//
+//    private void fileAppend(StringBuilder content, String include, String title) {
+//        File file = new File(include);
+//        if (file.exists()) {
+//            content.append(title).append(System.getProperty("line.separator"));
+//            content.append("include::").append(include).append("[]").append(System.getProperty("line.separator"));
+//        }
+//    }
 
 }

@@ -3,12 +3,19 @@
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
+:toc: left
+:toc-title: 接口列表
+
+== 简介
 
 Sample application demonstrating how to use Spring REST Docs .
 
+=== 测试
+原来简介这里是完全依靠asciidoc完成的，要么靠代码写
 `SampleJUnit5ApplicationTests 类` makes a call to a very simple service and produces three
 documentation snippets 生成的adoc有很多个，但是现在只用了三个.
 
+== 请求
 One showing how to make a request using cURL:
 
 include::{snippets}/home/curl-request.adoc[]

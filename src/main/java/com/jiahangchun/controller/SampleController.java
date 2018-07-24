@@ -17,4 +17,9 @@ public class SampleController {
         return "Hello, World";
     }
 
+    @RequestMapping("/2")
+    public String index2() {
+        return "Hello, World";
+    }
+
 }
