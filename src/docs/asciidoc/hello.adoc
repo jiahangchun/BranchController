@@ -1,0 +1,18 @@
+include::/Users/hzmk/Idea20180523/github/BranchController//src//docs//asciidoc//preview.adoc[]
+
+== home
+.http-request
+include::/Users/hzmk/Idea20180523/github/BranchController/target/snippets/home//http-request.adoc[]
+.request-body 请求体说明
+include::/Users/hzmk/Idea20180523/github/BranchController/target/snippets/home//request-body.adoc[]
+.http-response
+include::/Users/hzmk/Idea20180523/github/BranchController/target/snippets/home//http-response.adoc[]
+
+== test_mock_mvc_should_return_default_message2
+.http-request
+include::/Users/hzmk/Idea20180523/github/BranchController/target/snippets/test_mock_mvc_should_return_default_message2//http-request.adoc[]
+.request-body 请求体说明
+include::/Users/hzmk/Idea20180523/github/BranchController/target/snippets/test_mock_mvc_should_return_default_message2//request-body.adoc[]
+.http-response
+include::/Users/hzmk/Idea20180523/github/BranchController/target/snippets/test_mock_mvc_should_return_default_message2//http-response.adoc[]
+

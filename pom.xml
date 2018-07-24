@@ -131,7 +131,7 @@
                 <!-- Configure generic document generation settings -->
                 <configuration>
                     <sourceDirectory>${project.basedir}/src/docs/asciidoc</sourceDirectory>
-                    <sourceDocumentName>index.adoc</sourceDocumentName>
+                    <sourceDocumentName>hello.adoc</sourceDocumentName>
                     <attributes>
                         <doctype>book</doctype>
                         <toc>left</toc>
