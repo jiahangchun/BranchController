@@ -6,6 +6,7 @@ import org.springframework.mobile.device.DeviceHandlerMethodArgumentResolver;
 import org.springframework.mobile.device.DeviceResolverHandlerInterceptor;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.List;
  * @date Created at 2018/7/24 下午7:23
  **/
 @Configuration
-public class SpringMobileConfig extends WebMvcConfigurerAdapter {
+public class SpringMobileConfig implements WebMvcConfigurer {
 
     @Bean
     public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor() {
