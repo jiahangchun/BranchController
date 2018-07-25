@@ -10,7 +10,6 @@ import lombok.Data;
  */
 public enum UrlEnum {
 
-    FIRST_RENTI("http://www.27270.com/tag/1133.html",1L,1L,1L),
     NOVEL_BIQUGEXSW("http://www.27270.com/tag/1133.html",4L,1L,1L),
     ;
 
@@ -23,12 +22,12 @@ public enum UrlEnum {
 
 
     /**
-     * //1:人体艺术，2：邪恶漫画；3：动态图片；4.小说
+     *4.小说
      */
     private Long type;
 
     /**
-     * //1:http://www.27270.com/tag/1133.html 人体艺术，半裸
+     *
      * //2:http://www.biqugexsw.com/paihangbang/ 笔趣阁小说
      */
     private Long sourceType;
