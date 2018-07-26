@@ -1,20 +1,19 @@
 package com.jiahangchun.controller;
 
+import com.jiahangchun.annotation.SecurityAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author chunchun
@@ -28,7 +27,7 @@ public class HomeController {
     @Autowired
     WebApplicationContext applicationContext;
 
-
+    @SecurityAnnotation(level = 1)
     @RequestMapping("/")
     public void home(Device device) {
         if (device.isMobile()) {
@@ -42,7 +41,12 @@ public class HomeController {
         }
     }
 
-    @RequestMapping("/test")
+    @SecurityAnnotation(level = 2)
+    @RequestMapping(value = "/test",
+            method = {RequestMethod.POST, RequestMethod.GET},
+            headers = {"a=1"},
+            consumes = {"application/json"},
+            produces = {"application/json"})
     public void test(Device device) {
         System.out.println("lalal");
     }
@@ -62,8 +66,16 @@ public class HomeController {
         }
 
         for (HandlerMethod method : map.values()) {
-            RequestMapping requestMapping=method.getMethodAnnotation(RequestMapping.class);
-            System.out.println();
+            RequestMapping requestMapping = method.getMethodAnnotation(RequestMapping.class);
+            String[] path = requestMapping.path();
+            Arrays.stream(path).forEach((String p) -> {
+                System.out.println(p);
+            });
+
+            SecurityAnnotation securityAnnotation = method.getMethodAnnotation(SecurityAnnotation.class);
+            if (securityAnnotation != null) {
+                System.out.println(securityAnnotation.level());
+            }
         }
 
         urlList.stream().forEach((String url) -> {
