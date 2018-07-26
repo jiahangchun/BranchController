@@ -4,19 +4,16 @@
 :source-highlighter: coderay
 
 == 疑问点
-* [ ] 为什么记录resourceLoader?
-* [ ] 为什么记录primarySources，就是我们的启动类?
-* [x] ClassUtils 的使用
+* [x] ClassUtils 的使用 `详见ClassUtilsTest`
 * [ ] DispatcherHandler 这个和以前遇到的不一样啊
 * [ ] DispatcherServlet启动方式，流程
 * [ ] Servlet
-* [ ] 为什么上面三个的启动方式有点奇怪 DispatcherHandler->DispatcherServlet->Servlet
+* [x] 为什么上面三个的启动方式有点奇怪 DispatcherHandler->DispatcherServlet->Servlet 只是classLoader加载而已
 * [ ] 初始化类的时候"org.springframework.beans.BeanInfoFactory"在哪里加载的？各个类又是有什么作用？
 * [ ] 为什么在加载类的时候要将类名加载到cache里面？
-* [ ] Map.getOrDefault 方法可以取代检查这些类
-* [ ] new RuntimeException().getStackTrace()???为什么能获取到
-* [ ] 为什么最后还将我们自己的类 com.jiahangchun.App 进行Class.forName
-* [ ] 这
+* [x] Map.getOrDefault 方法可以取代检查这些类
+* [x] new RuntimeException().getStackTrace()    详见 `RunTimeTest`
+* [x] 为什么最后还将我们自己的类 com.jiahangchun.App 进行Class.forName 这个没关系的，class.forName只会加载一次
 
 == 主要工作
 [square]
@@ -26,22 +23,24 @@
 
 . webApplicationType
 * ClassUtils.isPresent 加载对应的类对象
+
 [source,java]
-    ----
+----
     loadClass("org.springframework.web.reactive.DispatcherHandler")
     loadClass("org.springframework.web.servlet.DispatcherServlet")
     loadClass("javax.servlet.Servlet")
-    ----
+----
 
 . Initializers
+
 [source,java]
-    ----
+----
         Set<String> names = new LinkedHashSet<>(
 				SpringFactoriesLoader.loadFactoryNames(type, classLoader));
 		List<T> instances = createSpringFactoriesInstances(type, parameterTypes,
 				classLoader, args, names);
 		AnnotationAwareOrderComparator.sort(instances);
-    ----
+----
 
 ** 获取到的是 `META-INF/spring.factories` 文件中的指定初始化类整整13个。
 ** 但是这里加载的的却是 `org.springframework.context.ApplicationListener` 的子类。 加载的时候还要加默认初始化方法
