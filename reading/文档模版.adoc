@@ -1,0 +1,17 @@
+= SpringApplication
+贾杭春 <jiahangchun@163.com>
+:icons: font
+:source-highlighter: coderay
+
+== 疑问点
+* [x] ClassUtils 的使用 `详见ClassUtilsTest`
+
+
+== 主要工作
+[square]
+. 记录resourceLoader
+
+. 记录primarySources
+
+. webApplicationType
+* ClassUtils.isPresent 加载对应的类对象

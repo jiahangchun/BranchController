@@ -1,0 +1,5 @@
+= ApplicationArguments
+
+只是为了获取程序运行时的参数
+
+https://segmentfault.com/q/1010000006190732/a-1020000006191251[自定义的ApplicationArguments]

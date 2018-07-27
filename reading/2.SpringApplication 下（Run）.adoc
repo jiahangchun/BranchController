@@ -1,0 +1,37 @@
+= SpringApplication
+贾杭春 <jiahangchun@163.com>
+:icons: font
+:source-highlighter: coderay
+
+== 疑问点
+* [x] StopWatch使用
+* [ ] java.awt.headless
+* [ ] SpringApplicationRunListeners 生命周期 & 自定义Event Listener
+* [ ] BeanUtils.instantiateClass 这里面为什么使用了Kotlin，有什么优势么？
+
+
+== 主要工作
+[square]
+. 启动以SpringApplicationRunListener.class为父类的spring.factories文档中的子类，实际上就只有EventPublishingRunListener。然后启动监听，获取到相关的listner启动
+
+. new DefaultApplicationArguments 这里面存放的是Application运行的args,参数配置
+
+. prepareEnvironment(listeners,applicationArguments) 准备环境，这里面好像也准备了参数
+
+. printBanner(environment) 打印了banner
+
+. createApplicationContext(); applicationContext上下文准备
+** org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext 创建实例
+
+. 初始化SpringBootExceptionReporter的子类 同样存储在META-INF/spring.factories中 ， 获取实例
+** 其实里面也就一个子类 org.springframework.boot.diagnostics.FailureAnalyzers
+
+. prepareContext
+
+. refreshContext(context); 其实启动的主要动作都在这里面
+
+. afterRefresh(context, applicationArguments);
+
+. listeners.started(context);
+
+. listeners.running(context);
