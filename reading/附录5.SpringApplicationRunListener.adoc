@@ -1,0 +1,16 @@
+= SpringApplicationRunListener
+
+* 生命周期
+* 启动方式
+SpringContext如何的到监听器： 当使用SpringApplication#createAndRefreshContext(..)中refresh(context)时，
+* 自定义的方式
+* 程序在执行SpringApplication时就已经完成了相关的方法 `starting() -> invokeListener(listener, event);`,但是这里启动的却是ApplicationStartingEvent的子类
+
+== 参考文章
+https://blog.csdn.net/u011179993/article/details/51555690[文章]
+https://segmentfault.com/a/1190000013714815[SpringStartedEvent]
+https://docs.spring.io/spring-boot/docs/2.0.3.RELEASE/reference/htmlsingle/[Spring Doc]
+https://blog.csdn.net/qq_30739519/article/details/78819042[讲得很好]
+
+== 使用范例
+https://www.cnblogs.com/ll409546297/p/6904448.html[这个是靠一个事件启动后再启动的]

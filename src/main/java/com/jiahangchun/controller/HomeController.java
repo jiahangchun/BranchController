@@ -2,6 +2,9 @@ package com.jiahangchun.controller;
 
 import com.jiahangchun.annotation.SecurityAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.event.SimpleApplicationEventMulticaster;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,7 +25,6 @@ import java.util.*;
  **/
 @RestController
 public class HomeController {
-
 
     @Autowired
     WebApplicationContext applicationContext;
