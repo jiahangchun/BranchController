@@ -7,9 +7,13 @@
 * [x] StopWatch使用
 * [ ] java.awt.headless
 * [ ] SpringApplicationRunListeners 生命周期 & 自定义Event Listener
-* [ ] BeanUtils.instantiateClass 这里面为什么使用了Kotlin，有什么优势么？
+* [ ] BeanUtils.instantiateClass 这里面为什么使用了Kotlin，有什么优势么？但是也就是基本的反射而已，注入的方式还是context.getBeanFactory().registerSingleton(AnnotationConfigUtils.CONFIGURATION_BEAN_NAME_GENERATOR,this.beanNameGenerator);
 * [ ] 这里面不会的很多啊。。。。。
-
+* [ ] message source
+* [ ] ThemeSource
+* [ ] Tomcat tomcat = new Tomcat()
+* [ ] TomcatWebServer 是如何与spring关联在一起的
+* [ ] 之后又回归到熟悉的Tomcat启动机制
 
 == 主要工作
 [square]
@@ -28,6 +32,8 @@
 ** 其实里面也就一个子类 org.springframework.boot.diagnostics.FailureAnalyzers
 
 . prepareContext
+* DefaultSingletonBeanRegistry 管理bean的中心
+* BeanDefinitionLoader 用于加载各种配置：xml,java_config,package等 。 这里应该就是真正加载配置文件的地方了
 
 . refreshContext(context); 其实启动的主要动作都在这里面
 
@@ -36,3 +42,7 @@
 . listeners.started(context);
 
 . listeners.running(context);
+
+= 文章
+https://blog.csdn.net/jamet/article/details/78291900[BeanDefinitionLoader解读]
+https://blog.csdn.net/jamet/article/details/77413189[ 其他人的分享]

@@ -1,0 +1,13 @@
+= 问题
+* [ ] 为什么注册的Map声明是concurrentHashMap，但是还是要synchronized(singletonObjects){}.难道concurrentHashMap包仍旧不能保证同步么？
+* [ ] DisposableBean 类销毁后执行相关方法，但是类在spring如何能准确地删除？
+* javaxInjectProviderClass??
+* [ ] BeanDefinitionLoader??
+
+= 流程
+* 注册真正的地址 DefaultSingletonBeanRegistry中的一个map对象中
+private final Map<String, Object> singletonObjects = new ConcurrentHashMap<>(256);
+
+= 文章
+* https://blog.csdn.net/msoso_______1988/article/details/9371467[InitializingBean和DisposableBean]
+* https://blog.csdn.net/xiaobai51509660/article/details/42610741[对DefaultSingletonBeanRegistry的函数属性标志解读，其实注释里面都有了]
