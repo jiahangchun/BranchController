@@ -1,0 +1,21 @@
+= AnnotationConfigServletWebServerApplication
+
+== 触发时间
+SpringApplication.run()
+    ConfigurableApplicationContext context= createApplicationContext();
+
+== 疑问点
+之前在初始化
+
+== 特定模式
+至于这个类型选择却是在SpringApplication初始化的时候加载的
+this.webApplicationType=deduceWebApplicationType();
+通过ClassUtils.isPresent 判断是否是其他的启动方式，默认的就是servlet启动.这里只能估计如果是其他方式启动会生成特殊的启动类，导致Spring能判断出这些方式的启动类型
+
+WebApplicationType.SERVLET : should run as a servlet-based web application
+
+== 实现方式
+ Class<?> contextClass=Class.forName("...AnnotationConfigServletWebServerApplication");
+ BeanUtils.instantiateClass(contextClass);
+
+
