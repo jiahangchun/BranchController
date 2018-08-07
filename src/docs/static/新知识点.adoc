@@ -1,0 +1,8 @@
+= 新知识点
+
+* [ ] Modularity提供了类似于OSGI框架的功能，模块之间存在相互的依赖关系
+* [ ] JVM 动态语言
+* [ ] Flow
+* [ ] Reactive编程模式
+* [ ] CompletableFuture API
+* java 8 default实现不需要继承类了

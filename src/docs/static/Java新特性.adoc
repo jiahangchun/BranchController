@@ -1,0 +1,34 @@
+= 新特性
+
+== Java9
+
+* [ ] 模块描述器
+* [ ] jshell REPL工具
+* [ ] 诊断命令
+* [ ] 多版本兼容Jar
+* [ ] 新的安全性 为什么禁用了SHA-1证书
+* [ ] 轻量级的json文本处理api
+* [ ] 多线程新内容
+* [ ] 基础类新内容
+* java.net新内容
+* Try-With-Resources的改变
+* Unsafe类的命运
+* Мulti-Resolution Image API
+* JVM优化
+
+== Java8
+
+
+
+=== JShell
+* 启动方式 命令行 jshell
+* help: /help intro
+* /list
+* 详细命令见 /help
+
+
+
+= 参考文章
+* https://www.jianshu.com/p/22876ec5e953[全面了解JDK9的新特性]
+* https://docs.oracle.com/javase/10/[Java10官方文档]
+* https://blog.csdn.net/qiubabin/article/details/70256683[Java8新特性说明]
