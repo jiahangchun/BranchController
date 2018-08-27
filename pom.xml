@@ -50,6 +50,14 @@
             <artifactId>spring-restdocs-mockmvc</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.cdancy/jenkins-rest -->
+        <dependency>
+            <groupId>com.cdancy</groupId>
+            <artifactId>jenkins-rest</artifactId>
+            <version>0.0.13</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>
