@@ -50,11 +50,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
      */
     @Bean
     public UserDetailsService userDetailsService() {
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        manager.createUser(User.withUsername("test").password("test").roles("USER").build());
-//        manager.createUser(User.withUsername("2").password("2").roles("测试用户1接口权限").build());
-
-        MyJdbcUserDetailManager manager=new MyJdbcUserDetailManager();
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(User.withUsername("test").password("test").roles("USER").build());
+        manager.createUser(User.withUsername("2").password("2").roles("测试用户1接口权限").build());
+//        MyJdbcUserDetailManager manager=new MyJdbcUserDetailManager();
         return manager;
     }
 }

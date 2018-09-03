@@ -1,6 +1,7 @@
 package com.jiahangchun.controller;
 
 import com.jiahangchun.config.MyHolder;
+import com.jiahangchun.manager.UsersManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,6 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class TestController {
+
+    @Autowired
+    private UsersManager usersManager;
+
+    @RequestMapping(value = "user/save", name = "添加用户", method = RequestMethod.GET)
+    public void addUsers(){
+        usersManager.test();
+    }
 
     /**
      * 测试接口
