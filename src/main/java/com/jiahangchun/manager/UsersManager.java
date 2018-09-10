@@ -1,7 +1,7 @@
 package com.jiahangchun.manager;
 
-import com.jiahangchun.dao.Users;
-import com.jiahangchun.respository.UsersRespository;
+import com.jiahangchun.dao.UsersDO;
+import com.jiahangchun.dao.respository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,11 +16,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class UsersManager {
 
     @Autowired
-    private UsersRespository usersRespository;
+    private UsersRepository usersRepository;
 
     public void test(){
-        Users user=new Users();
+        UsersDO user=new UsersDO();
         user.setName("jiahangcun");
-        usersRespository.save(user);
+        usersRepository.save(user);
     }
 }
