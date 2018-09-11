@@ -1,7 +1,6 @@
 package com.jiahangchun.config;
 
 import com.jiahangchun.user.MyJdbcUserDetailsManager;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -9,9 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /**
  * @author chunchun
@@ -42,36 +39,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             // other public endpoints of your API may be appended to this array
     };
 
-
-    @Autowired
-    private MyHolder myHolder;
-    @Autowired
-    private CustomAuthenticationFailHander customAuthenticationFailHander;
-    @Autowired
-    private CustomAuthenticationSuccessHandler customAuthenticationSuccessHander;
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http.cors().and().csrf().disable().authorizeRequests()
-//                .antMatchers("/user/1").hasRole("USER")
-//                .antMatchers(HttpMethod.POST, "/users/signUp").permitAll()
-//                .anyRequest().authenticated()
-//                .and().formLogin().permitAll()
-
-//                .antMatchers("/test/1").permitAll()
-
-//                .antMatchers("/user/*").access("@webSecurity.check(authentication,request)")
-        // 使其支持跨域
-//                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
-//                .and().formLogin().permitAll()
-//                .failureHandler(customAuthenticationFailHander)
-//                .successHandler(customAuthenticationSuccessHander)
-
-
-//                .and().logout().permitAll()
-//                .and().rememberMe()
-//                .and().csrf().disable()
-
         http.cors().and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
@@ -79,7 +48,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated()  // 所有请求需要身份认证
                 .and()
-                .addFilter(new JWTAuthenticationFilter(authenticationManager()))
+                .addFilter(new JWTAuthenticationFilter(authenticationManager(),userDetailsService()))
                 .addFilter(new JWTLoginFilter(authenticationManager()))
                 .logout() // 默认注销行为为logout，可以通过下面的方式来修改
                 .logoutUrl("/logout")

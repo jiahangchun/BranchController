@@ -1,11 +1,11 @@
 package com.jiahangchun.config;
 
-import com.jiahangchun.tool.JsonUtil;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import javax.servlet.FilterChain;
@@ -13,7 +13,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,8 +23,11 @@ import java.util.stream.Collectors;
  **/
 public class JWTAuthenticationFilter extends BasicAuthenticationFilter {
 
-    public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
+    private UserDetailsService userDetailsService;
+
+    public JWTAuthenticationFilter(AuthenticationManager authenticationManager, UserDetailsService userDetailsService) {
         super(authenticationManager);
+        this.userDetailsService = userDetailsService;
     }
 
     @Override
@@ -54,14 +56,15 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter {
                     .getSubject();
 
             if (user != null) {
-                String permissionsStr = user.split("_")[1];
-                List<String> permissions=JsonUtil.parseJson(permissionsStr,List.class);
-                List<GrantedAuthority> grantedAuthorities=permissions.stream().map(str->{return new GrantedAuthority() {
-                    @Override
-                    public String getAuthority() {
-                        return str;
-                    }
-                };}).collect(Collectors.toList());
+                List<String> permissions = userDetailsService.loadUserByUsername(user).getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
+                List<GrantedAuthority> grantedAuthorities = permissions.stream().map(str -> {
+                    return new GrantedAuthority() {
+                        @Override
+                        public String getAuthority() {
+                            return str;
+                        }
+                    };
+                }).collect(Collectors.toList());
 
                 return new UsernamePasswordAuthenticationToken(user, null, grantedAuthorities);
             }
@@ -69,5 +72,4 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter {
         }
         return null;
     }
-
 }

@@ -2,6 +2,7 @@ package com.jiahangchun.controller;
 
 import com.jiahangchun.dao.UsersDO;
 import com.jiahangchun.manager.UsersManager;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date Created at 2018/8/29 下午2:49
  **/
 @RestController
+@Api(value = "本地测试", description = "不用管的")
 public class TestController {
 
     @Autowired

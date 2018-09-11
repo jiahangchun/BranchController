@@ -76,7 +76,8 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
         List<String> permissions=authorities.stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
 
         String token = Jwts.builder()
-                .setSubject((String) auth.getPrincipal()+"_"+JsonUtil.toJson(permissions))
+                .setSubject((String) auth.getPrincipal())
+//                .setSubject((String) auth.getPrincipal()+"_"+JsonUtil.toJson(permissions))
                 .setExpiration(new Date(System.currentTimeMillis() + 60 * 60 * 24 * 1000))
                 .signWith(SignatureAlgorithm.HS512, "MyJwtSecret")
                 .compact();

@@ -3,6 +3,8 @@ package com.jiahangchun.controller;
 import com.google.common.base.Preconditions;
 import com.jiahangchun.dao.*;
 import com.jiahangchun.dao.respository.*;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,7 @@ import javax.annotation.Resource;
  * @date Created at 2018/9/10 上午9:17
  **/
 @RestController
+@Api(value = "权限管理", description = "添加不同的权限")
 public class AddController {
     @Resource
     private UsersRepository usersRepository;
@@ -30,10 +33,10 @@ public class AddController {
 
 
     /**
-     *
      * @param usersDO
      * @return
      */
+    @ApiOperation(value = "添加用户")
     @RequestMapping(value = "user/add", name = "添加用户", method = RequestMethod.POST)
     public String addUsers(@RequestBody UsersDO usersDO) {
         Preconditions.checkArgument(usersDO.getName() != null, "name 不能为空");
@@ -44,10 +47,10 @@ public class AddController {
     }
 
     /**
-     *
      * @param groupsDO
      * @return
      */
+    @ApiOperation(value = "添加组")
     @RequestMapping(value = "group/add", name = "添加组", method = RequestMethod.POST)
     public String addGroup(@RequestBody GroupsDO groupsDO) {
         Preconditions.checkArgument(groupsDO.getName() != null, "name 不能为空");
@@ -58,10 +61,10 @@ public class AddController {
 
 
     /**
-     *
      * @param userGroupDetailDO
      * @return
      */
+    @ApiOperation(value = "添加组和用户关系")
     @RequestMapping(value = "user_group/add", name = "添加组和用户关系", method = RequestMethod.POST)
     public String addUserGroup(@RequestBody UserGroupDetailDO userGroupDetailDO) {
         Preconditions.checkArgument(userGroupDetailDO.getGroupId() != null, "groupId 不能为空");
@@ -72,10 +75,10 @@ public class AddController {
     }
 
     /**
-     *
      * @param permissionDO
      * @return
      */
+    @ApiOperation(value = "添加权限")
     @RequestMapping(value = "permission/add", name = "添加权限", method = RequestMethod.POST)
     public String addPermission(@RequestBody PermissionDO permissionDO) {
         Preconditions.checkArgument(permissionDO.getName() != null, "name 不能为空");
@@ -86,10 +89,10 @@ public class AddController {
     }
 
     /**
-     *
      * @param groupPermissionDetailDO
      * @return
      */
+    @ApiOperation(value = "添加组和权限的关系")
     @RequestMapping(value = "group_permission/add", name = "添加组和权限的关系", method = RequestMethod.POST)
     public String addGroupPermission(@RequestBody GroupPermissionDetailDO groupPermissionDetailDO) {
         Preconditions.checkArgument(groupPermissionDetailDO.getPermissionId() != null, "permissionId 不能为空");
