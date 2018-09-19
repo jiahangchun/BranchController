@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
  **/
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private static final String[] AUTH_WHITELIST = {
@@ -48,7 +48,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated()  // 所有请求需要身份认证
                 .and()
-                .addFilter(new JWTAuthenticationFilter(authenticationManager(),userDetailsService()))
+                .addFilter(new JWTAuthenticationFilter(authenticationManager(), userDetailsService()))
                 .addFilter(new JWTLoginFilter(authenticationManager()))
                 .logout() // 默认注销行为为logout，可以通过下面的方式来修改
                 .logoutUrl("/logout")

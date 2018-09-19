@@ -29,11 +29,21 @@ public class JenkinsApiTest {
     }
 
     public static void main(String[] args) throws Exception {
-        JenkinsApiTest jenkinsApiTest = new JenkinsApiTest();
-//        jenkinsApiTest.startJob();
+//        JenkinsApiTest jenkinsApiTest = new JenkinsApiTest();
+//////        jenkinsApiTest.startJob();
+////
+//////        jenkinsApiTest.printlog();
+////        jenkinsApiTest.createJob();
 
-//        jenkinsApiTest.printlog();
-        jenkinsApiTest.createJob();
+
+        String a="test";
+        String b="ff";
+        String c="ta";
+        String d="es";
+
+        System.out.println(a.contains(b));
+        System.out.println(a.contains(c));
+        System.out.println(a.contains(d));
     }
 
     /**
