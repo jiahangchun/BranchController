@@ -1,15 +1,14 @@
 package com.jiahangchun.controller;
 
+import com.google.common.base.Preconditions;
+import com.jiahangchun.dao.GroupsDO;
 import com.jiahangchun.dao.UsersDO;
 import com.jiahangchun.manager.UsersManager;
-import io.swagger.annotations.Api;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author chunchun
@@ -38,6 +37,16 @@ public class TestController {
     public String testAccess() {
         usersManager.test();
         return "add users";
+    }
+
+    /**
+     * @return
+     */
+    @ApiOperation(value = "添加测试swagger")
+    @RequestMapping(value = "swagger/test", name = "添加测试swagger", method = RequestMethod.POST)
+    public String testSwagger(@ApiParam(name="参数id",required = true,example = "123",defaultValue = "1234",value = "12345") @RequestParam(name="id号")Long id,
+                           @ApiParam(name="参数名称",required = true,example = "name1",defaultValue = "name2",value = "name3") @RequestParam(name="名称")String name) {
+        return "testSwagger";
     }
 
     /**

@@ -34,6 +34,7 @@ public class SwaggerConfig {
         ParameterBuilder tokenPar = new ParameterBuilder();
         List<Parameter> pars = new ArrayList<Parameter>();
         tokenPar.name("Authorization").description("令牌").defaultValue(TOKEN).modelRef(new ModelRef("string")).parameterType("header").required(false).build();
+        tokenPar.name("access_token_test").description("必须的参数").defaultValue("123456").modelRef(new ModelRef("string")).parameterType("param").required(false).build();
         pars.add(tokenPar.build());
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .select()
@@ -54,6 +55,8 @@ public class SwaggerConfig {
                 "API TOS",
                 "Terms of service",
                 new Contact("Jiahangchun", null, null),
-                "License of API", "API license URL", Collections.emptyList());
+                "License of API",
+                "API license URL",
+                Collections.emptyList());
     }
 }

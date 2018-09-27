@@ -180,6 +180,56 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+
+            <!--<plugin>-->
+                <!--<groupId>com.github.kongchen</groupId>-->
+                <!--<artifactId>swagger-maven-plugin</artifactId>-->
+                <!--<version>3.1.0</version>-->
+                <!--<configuration>-->
+                    <!--<apiSources>-->
+                        <!--<apiSource>-->
+                            <!--<springmvc>false</springmvc> &lt;!&ndash; false为JAX-RS &ndash;&gt;-->
+                            <!--<locations>com.rooyeetone.rtprest.rest</locations>-->
+                            <!--<schemes>http,https</schemes>-->
+                            <!--<host>petstore.swagger.wordnik.com</host>-->
+                            <!--<basePath>/rtprest/rest</basePath>-->
+                            <!--<info>-->
+                                <!--<title>RTP REST APIs</title>-->
+                                <!--<version>v1</version>-->
+                                <!--<description>This is a sample for swagger-maven-plugin</description>-->
+                                <!--<termsOfService>-->
+                                    <!--http://www.github.com/kongchen/swagger-maven-plugin-->
+                                <!--</termsOfService>-->
+                                <!--<contact>-->
+                                    <!--<email>kongchen@gmail.com</email>-->
+                                    <!--<name>Kong Chen</name>-->
+                                    <!--<url>http://kongch.com</url>-->
+                                <!--</contact>-->
+                                <!--<license>-->
+                                    <!--<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>-->
+                                    <!--<name>Apache 2.0</name>-->
+                                <!--</license>-->
+                            <!--</info>-->
+                            <!--<templatePath>${basedir}/src/main/resources/templates/strapdown.html.hbs</templatePath>-->
+                            <!--<outputPath>${basedir}/src/main/resources/generated/document.html</outputPath>-->
+                            <!--<swaggerDirectory>${basedir}/src/main/resources/generated/swagger-ui</swaggerDirectory>-->
+                            <!--&lt;!&ndash;                                <attachSwaggerArtifact>true</attachSwaggerArtifact> &ndash;&gt;-->
+                            <!--&lt;!&ndash;                                <jsonExampleValues>true</jsonExampleValues> &ndash;&gt;-->
+                        <!--</apiSource>-->
+                    <!--</apiSources>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>compile</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+
+
         </plugins>
     </build>
 </project>

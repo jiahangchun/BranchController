@@ -5,6 +5,7 @@ import com.jiahangchun.dao.*;
 import com.jiahangchun.dao.respository.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -52,7 +53,7 @@ public class AddController {
      */
     @ApiOperation(value = "添加组")
     @RequestMapping(value = "group/add", name = "添加组", method = RequestMethod.POST)
-    public String addGroup(@RequestBody GroupsDO groupsDO) {
+    public String addGroup(@RequestBody @ApiParam(name="参数",required = true)GroupsDO groupsDO) {
         Preconditions.checkArgument(groupsDO.getName() != null, "name 不能为空");
         groupsDO.setId(null);
         groupsRepository.save(groupsDO);
