@@ -1,0 +1,1 @@
+INSERT INTO `user` (`mobile`, `password`) VALUES ('2', '2222');

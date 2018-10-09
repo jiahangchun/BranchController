@@ -17,7 +17,7 @@ public class CustomExceptionResolver {
     @ExceptionHandler
     @ResponseBody
     public String handle(Exception e) {
-        log.error("参数错误：{}", e.getMessage());
+        log.error("异常：{}", e.getMessage(),e);
         return "{\"code\":20003,\"msg\":\"the param is invalid\"}";
     }
 
