@@ -1,9 +1,8 @@
 package com.jiahangchun.DO;
 
 import lombok.Data;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 
 /**
  * @author chunchun
@@ -15,16 +14,18 @@ import javax.persistence.Id;
 public class UserDO {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /**
      * 手机号
      */
+    @Column
     private String mobile;
 
     /**
      * 密码
      */
+    @Column
     private String password;
 }
