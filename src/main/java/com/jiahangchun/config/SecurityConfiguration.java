@@ -25,6 +25,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/users/signUp",//测试使用
             "/users/add",
             "/group/add",
+            "/test/**",
             "/user_group/add",
             "/permission/add",
             "/group_permission/add",

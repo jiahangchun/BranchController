@@ -1,0 +1,9 @@
+SpringSecurity处理过程
+1/OncePerRequestFilter.doFilter 这个类其实是实现了Tomcat的Filter接口，不归属于Spring.同时OrderedCharacterEncodingFilter & WsFilter 都是类似于 OncePerRequestFilter一样，通过实现Filter来实现的。但是这个DelegatingFilterProxyRegistrationBean不知道为什么也被归入到Filter里面了
+2/CharacterEncodingFilter没有进入Spring的主流程就被实际调用了，而且是通过Tomcat的Filter完成调用的
+3/ApplicationFilterChain.doFilter(internalDoFilter)
+4/DelegatingFilterProxy这里终于开始引入SpringSecurity:this.delegate=webApplicationContext.getBean("SpringSecurityFilterChain",Filter.class);
+5/DelegatingFilterProxy(实际上是SpringSecurityFilterChain).invokeDelegate 解释是：Let the delegate perform the actual doFilter operation.  看代码好像是将SpringSecurity的Filter当作一个Filter重新过一遍。
+6/FilterChainProxy->VirtualFilterChain.doFilter
+7/在SpringSecurity中自己默默地加10+个Filter,更关键地是这些新地Filter实现了Servlet的Filter,导致直接像是Tomcat的Filter.由于pos++,所以这10+个Filter会被依次调用。
+8/

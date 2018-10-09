@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
  **/
 @RestController
 @Api(value = "本地测试", description = "不用管的")
+@RequestMapping("/test/")
 public class TestController {
 
     @Autowired
@@ -35,7 +36,7 @@ public class TestController {
 
     @RequestMapping(value = "test/access", name = "测试", method = RequestMethod.GET)
     public String testAccess() {
-        usersManager.test();
+//        usersManager.test();
         return "add users";
     }
 
