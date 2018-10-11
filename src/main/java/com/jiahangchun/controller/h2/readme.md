@@ -1,3 +1,11 @@
 1.H2 听说是由Java存粹地实现的
 2.多数据源
 2.事务
+
+事务其实可以从断点里面看出来，所有的具体执行在TransactionAspectSupport中被执行。  
+在调用CglibAopProxy执行具体的方法时会先执行TransactionAspectSupport,而这个TransactionAspectSupport可以通过implements看出它更多地像是一个拦截器Interceptor->
+TransactionInfo transactionInfo=createTransactionIfNecessary(PlatformTransactionManager)->
+invocation.processedWithInvocation()->
+commitTransactionAfterReturning || completeTransactionAfterThrowing 
+
+能力有限
