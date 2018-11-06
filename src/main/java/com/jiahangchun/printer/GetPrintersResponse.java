@@ -10,11 +10,7 @@ import java.util.List;
  * @date Created at 2018/11/5 下午3:54
  **/
 @Data
-public class GetPrintersDO {
-
-    private String cmd;
-
-    private String requestID;
+public class GetPrintersResponse extends Response{
 
     private String version;
 
