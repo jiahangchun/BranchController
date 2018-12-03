@@ -41,13 +41,19 @@ public class LogAspect {
         System.out.println("方法的返回值 : " + ret);
     }
 
-    //后置异常通知
+    /**
+     * 后置异常通知
+     * @param jp
+     */
     @AfterThrowing("webLog()")
     public void throwss(JoinPoint jp){
         System.out.println("方法异常时执行.....");
     }
 
-    //后置最终通知,final增强，不管是抛出异常或者正常退出都会执行
+    /**
+     * 后置最终通知,final增强，不管是抛出异常或者正常退出都会执行
+     * @param jp
+     */
     @After("webLog()")
     public void after(JoinPoint jp){
         System.out.println("方法最后执行.....");

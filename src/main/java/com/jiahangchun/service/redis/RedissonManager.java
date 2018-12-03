@@ -11,7 +11,7 @@ import org.redisson.config.Config;
  **/
 public class RedissonManager {
 
-    private static final String RAtomicName = "genId_";
+    private static final String R_ATOMIC_NAME = "genId_";
 
     private static Config config = new Config();
     private static Redisson redisson = null;
@@ -26,7 +26,7 @@ public class RedissonManager {
             config.useSingleServer().setAddress("http://127.0.0.1:6379");
             redisson = (Redisson) Redisson.create(config);
             //清空自增的ID数字
-            RAtomicLong atomicLong = redisson.getAtomicLong(RAtomicName);
+            RAtomicLong atomicLong = redisson.getAtomicLong(R_ATOMIC_NAME);
             atomicLong.set(1);
         }catch (Exception e){
             e.printStackTrace();
@@ -39,7 +39,7 @@ public class RedissonManager {
 
     /** 获取redis中的原子ID */
     public static Long nextID(){
-        RAtomicLong atomicLong = getRedisson().getAtomicLong(RAtomicName);
+        RAtomicLong atomicLong = getRedisson().getAtomicLong(R_ATOMIC_NAME);
         atomicLong.incrementAndGet();
         return atomicLong.get();
     }

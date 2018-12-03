@@ -13,7 +13,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Slf4j
 @ControllerAdvice
 public class CustomExceptionResolver {
-    //    @ExceptionHandler({MissingServletRequestParameterException.class,TypeMismatchException.class})
+    /**
+     *  @ExceptionHandler({MissingServletRequestParameterException.class,TypeMismatchException.class})
+      * @param e
+     * @return
+     */
+
     @ExceptionHandler
     @ResponseBody
     public String handle(Exception e) {

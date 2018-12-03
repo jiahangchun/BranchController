@@ -18,9 +18,11 @@ public class Request {
 
     private String requestID;
 
-    private String printer;//获取打印配置
+    //获取打印配置
+    private String printer;
 
-    private Task task;//发送打印任务
+    //发送打印任务
+    private Task task;
 
     /**
      * 发送打印任务

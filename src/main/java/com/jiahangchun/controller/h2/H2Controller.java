@@ -3,7 +3,6 @@ package com.jiahangchun.controller.h2;
 import com.jiahangchun.DO.UserDO;
 import com.jiahangchun.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,7 +32,6 @@ public class H2Controller {
     }
 
     @RequestMapping("/h2/add")
-    @Transactional
     public String add() {
         UserDO userDO=new UserDO();
         userDO.setMobile("15700082376");

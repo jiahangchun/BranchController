@@ -1,4 +1,4 @@
-package com.jiahangchun.service.viewResolver;
+package com.jiahangchun.service.view;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 /**

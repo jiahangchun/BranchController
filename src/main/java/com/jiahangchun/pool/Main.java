@@ -17,16 +17,16 @@ public class Main {
     public static void main(String[] args) throws Exception {
         setObjectPool();
 
-        for(int i=0;i<=10;i++) {
-            TestObject testObject = objectPool.borrowObject();
-            testObject.add();
-            TestObject testObject2 = objectPool.borrowObject();
-            testObject2.add();
-            objectPool.returnObject(testObject2);
-            objectPool.returnObject(testObject);
-        }
-
-        objectPool.close();
+//        for(int i=0;i<=10;i++) {
+//            TestObject testObject = objectPool.borrowObject();
+//            testObject.add();
+//            TestObject testObject2 = objectPool.borrowObject();
+//            testObject2.add();
+//            objectPool.returnObject(testObject2);
+//            objectPool.returnObject(testObject);
+//        }
+//
+//        objectPool.close();
     }
 
     private static GenericObjectPool<TestObject> objectPool = null;

@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * Hello world!
- *
+ * @author  s
  */
 @SpringBootApplication
 @EnableTransactionManagement

@@ -17,7 +17,7 @@ public class GetConfig implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
+        GetConfig.applicationContext = applicationContext;
     }
 
     public static ApplicationContext getApplicationContext() {

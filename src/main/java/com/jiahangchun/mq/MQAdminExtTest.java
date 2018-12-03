@@ -28,6 +28,7 @@ public class MQAdminExtTest {
         }
 
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
             public void run() {
                 defaultMQAdminExt.shutdown();
             }
