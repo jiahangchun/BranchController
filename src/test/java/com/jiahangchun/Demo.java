@@ -30,7 +30,7 @@ public class Demo {
 //            Counter.increment();
 //            System.out.println("counter: " + Counter.value());
 //            TimeUnit.SECONDS.sleep(1);
-//        }dddddddmddd
+//        }解决
 //    }
 
     public static void main(String[] args) {
