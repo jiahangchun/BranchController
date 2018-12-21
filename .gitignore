@@ -71,3 +71,27 @@ logs/
 *.log
 .DS_Store
 .out
+
+
+/hello-vue/.DS_Store
+/hello-vue/node_modules
+/hello-vue/dist
+
+# local env files
+/hello-vue/.env.local
+/hello-vue/.env.*.local
+
+# Log files
+/hello-vue/npm-debug.log*
+/hello-vue/yarn-debug.log*
+/hello-vue/yarn-error.log*
+
+# Editor directories and files
+/hello-vue/.idea
+/hello-vue/.vscode
+/hello-vue/*.suo
+/hello-vue/*.ntvs*
+/hello-vue/*.njsproj
+/hello-vue/*.sln
+/hello-vue/*.sw*
+
