@@ -1,7 +1,11 @@
 package com.jiahangchun.controller.aop;
 
+import com.jiahangchun.application.AppContext;
+import com.jiahangchun.application.TestEvent;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author chunchun
@@ -10,6 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 public class AopController {
+
+    @Resource
+    private AppContext appContext;
+
     @RequestMapping("/first")
     public Object first() {
         return "first controller";
@@ -18,5 +26,12 @@ public class AopController {
     @RequestMapping("/doError")
     public Object error() {
         return 1 / 0;
+    }
+
+    @RequestMapping("/testEvent")
+    public Object testEvent() {
+        TestEvent testEvent=new TestEvent("ddddd","ddddd");
+        appContext.getApplicationContext().publishEvent(testEvent);
+        return "vvv";
     }
 }
