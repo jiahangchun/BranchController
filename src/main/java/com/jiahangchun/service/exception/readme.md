@@ -1,4 +1,4 @@
-20180910
+## 20180910
 	/**
 	 * Make the given method accessible, explicitly setting it accessible if
 	 * necessary. The {@code setAccessible(true)} method is only called
@@ -18,7 +18,7 @@ public static void makeAccessible(Method method) {
 InvocableHandlerMethod是每一个类都是必须的么？
 
 
-20180926
+## 20180926
 其实被调用ControllerAdvice的真正的地方就是在resolveHandlerException   
 我到觉得这里有几个点需要特别关注下：1.反射方式地调用某个bean的方法，2.Annotation的收集解析 3.spring的异常处理机制  
 
@@ -39,14 +39,14 @@ ExceptionHandlerExceptionResolver.doResolveHandlerMethodException->
         5/然后就是顺理成章地进行代理调用我们写好地ControllerAdvice
 
 
-20180928
+## 20180928
 反射地调用某个方法
     		Spring中主要应该是InvocableHandlerMethod方法进行的
     		    doInvoke(Object... args)->
     		    里面其实主要是getBridgedMethod().invoke(getBean(),args) 换句话说其实Spring在调用这一块的代码只是简单使用了[MethodAccess](https://www.cnblogs.com/onlywujun/p/3519037.html)
     		    
     		    
-20180929
+## 20180929
 对注解的解析和注册，我是通过观察DefaultListableBeanFactory实现的BeanDefinitionRegistry.registryBeanDefinition来找到对应的Bean注册的方法。
     1/DefaultListableBeanFactory.registryBeanDefinition 这个其实就是我观察的入口了
     2/BeanDefinitionReadUtils.registerBeanDefinition的通用方法
@@ -67,6 +67,8 @@ ExceptionHandlerExceptionResolver.doResolveHandlerMethodException->
     10/AbstractApplicationContext.invokeBeanFactoryPostProcessors
     11/AbstractApplicationContext.refresh();
 以上就是Controller & Service (Any @ComponentScan) 被实例化进入IOC池当中的所有过程
+
+## 20190109
 
 
 参考文章：
