@@ -69,6 +69,7 @@ ExceptionHandlerExceptionResolver.doResolveHandlerMethodException->
 以上就是Controller & Service (Any @ComponentScan) 被实例化进入IOC池当中的所有过程
 
 ## 20190109
+其实感觉这些有点像业务逻辑，只是在特定的时候执行。在初始化的时候收集信息，在需要使用的时候而已，我更加希望看到的是设计。
 
 
 参考文章：
