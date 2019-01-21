@@ -12,7 +12,7 @@
     </content>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/java-websocket/Java-WebSocket/1.3.0/Java-WebSocket-1.3.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -22,7 +22,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/rocketmq/rocketmq-tools/3.2.6/rocketmq-tools-3.2.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -52,7 +52,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/rocketmq/rocketmq-remoting/3.2.6/rocketmq-remoting-3.2.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -62,7 +62,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/fastjson/1.2.3/fastjson-1.2.3-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -72,7 +72,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-all/4.1.25.Final/netty-all-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -82,7 +82,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -92,7 +92,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/rocketmq/rocketmq-store/3.2.6/rocketmq-store-3.2.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -102,7 +102,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/rocketmq/rocketmq-srvutil/3.2.6/rocketmq-srvutil-3.2.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -112,7 +112,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -132,7 +132,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -142,7 +142,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -152,7 +152,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/kohsuke/github-api/1.59/github-api-1.59-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -172,7 +172,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -182,7 +182,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -192,7 +192,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -202,7 +202,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -212,7 +212,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/infradna/tool/bridge-method-annotation/1.12/bridge-method-annotation-1.12-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -222,7 +222,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jenkins-ci/annotation-indexer/1.4/annotation-indexer-1.4-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -232,7 +232,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -282,7 +282,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-tcnative-boringssl-static/1.1.33.Fork26/netty-tcnative-boringssl-static-1.1.33.Fork26-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -292,7 +292,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -312,7 +312,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE/spring-boot-starter-web-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -322,7 +322,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE/spring-boot-starter-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -352,7 +352,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/spring-jcl/5.0.7.RELEASE/spring-jcl-5.0.7.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -392,7 +392,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/spring-expression/5.0.7.RELEASE/spring-expression-5.0.7.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -412,7 +412,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.3.RELEASE/spring-boot-starter-logging-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -422,7 +422,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -432,7 +432,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -442,7 +442,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -452,7 +452,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -462,7 +462,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -472,7 +472,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE/spring-boot-starter-json-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -492,7 +492,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6/jackson-datatype-jdk8-2.9.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -502,7 +502,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6/jackson-datatype-jsr310-2.9.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -512,7 +512,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.6/jackson-module-parameter-names-2.9.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -522,7 +522,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE/spring-boot-starter-tomcat-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -542,7 +542,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -552,7 +552,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -562,7 +562,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/hibernate/validator/hibernate-validator/6.0.10.Final/hibernate-validator-6.0.10.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -572,7 +572,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -582,7 +582,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -592,7 +592,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -612,7 +612,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-webflux/2.0.3.RELEASE/spring-boot-starter-webflux-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -622,7 +622,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/2.0.3.RELEASE/spring-boot-starter-reactor-netty-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -632,7 +632,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/projectreactor/ipc/reactor-netty/0.7.8.RELEASE/reactor-netty-0.7.8.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -642,7 +642,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-codec-http/4.1.25.Final/netty-codec-http-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -652,7 +652,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-codec/4.1.25.Final/netty-codec-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -662,7 +662,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-transport/4.1.25.Final/netty-transport-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -672,7 +672,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-buffer/4.1.25.Final/netty-buffer-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -682,7 +682,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-common/4.1.25.Final/netty-common-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -692,7 +692,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-resolver/4.1.25.Final/netty-resolver-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -702,7 +702,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-handler/4.1.25.Final/netty-handler-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -712,7 +712,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-handler-proxy/4.1.25.Final/netty-handler-proxy-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -722,7 +722,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-codec-socks/4.1.25.Final/netty-codec-socks-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -740,7 +740,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-transport-native-unix-common/4.1.25.Final/netty-transport-native-unix-common-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -750,7 +750,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/projectreactor/reactor-core/3.1.8.RELEASE/reactor-core-3.1.8.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -760,7 +760,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -780,7 +780,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/synchronoss/cloud/nio-multipart-parser/1.1.0/nio-multipart-parser-1.1.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -790,7 +790,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/synchronoss/cloud/nio-stream-storage/1.1.3/nio-stream-storage-1.1.3-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -800,7 +800,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-test/2.0.3.RELEASE/spring-boot-starter-test-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -810,7 +810,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-test/2.0.3.RELEASE/spring-boot-test-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -820,7 +820,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.0.3.RELEASE/spring-boot-test-autoconfigure-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -830,7 +830,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -840,7 +840,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/net/minidev/json-smart/2.3/json-smart-2.3-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -850,7 +850,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -860,7 +860,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -890,7 +890,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -900,7 +900,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -910,7 +910,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/net/bytebuddy/byte-buddy/1.7.11/byte-buddy-1.7.11-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -920,7 +920,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/net/bytebuddy/byte-buddy-agent/1.7.11/byte-buddy-agent-1.7.11-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -930,7 +930,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/objenesis/objenesis/2.6/objenesis-2.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -950,7 +950,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -970,7 +970,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/spring-test/5.0.7.RELEASE/spring-test-5.0.7.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -980,7 +980,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/xmlunit/xmlunit-core/2.5.1/xmlunit-core-2.5.1-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -990,7 +990,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/projectreactor/reactor-test/3.1.8.RELEASE/reactor-test-3.1.8.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1000,7 +1000,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/restdocs/spring-restdocs-mockmvc/2.0.1.RELEASE/spring-restdocs-mockmvc-2.0.1.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1020,7 +1020,7 @@
     </orderEntry>  
     <orderEntry scope="TEST" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/restdocs/spring-restdocs-core/2.0.1.RELEASE/spring-restdocs-core-2.0.1.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1040,7 +1040,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-resolver-dns/4.1.25.Final/netty-resolver-dns-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1050,7 +1050,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty-codec-dns/4.1.25.Final/netty-codec-dns-4.1.25.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1060,7 +1060,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/javax/cache/cache-api/1.1.0/cache-api-1.1.0-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1070,7 +1070,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/projectreactor/reactor-stream/2.0.8.RELEASE/reactor-stream-2.0.8.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1080,7 +1080,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.6/jackson-dataformat-yaml-2.9.6-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1090,7 +1090,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jodd/jodd-bean/3.7.1/jodd-bean-3.7.1-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1100,7 +1100,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jodd/jodd-core/3.7.1/jodd-core-3.7.1-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1110,7 +1110,7 @@
     </orderEntry>  
     <orderEntry scope="RUNTIME" type="module-library"> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/h2database/h2/1.4.197/h2-1.4.197-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1120,7 +1120,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.0.3.RELEASE/spring-boot-starter-data-jpa-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1130,7 +1130,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-aop/2.0.3.RELEASE/spring-boot-starter-aop-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1140,7 +1140,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1150,7 +1150,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.0.3.RELEASE/spring-boot-starter-jdbc-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1210,7 +1210,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1230,7 +1230,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jboss/jandex/2.0.3.Final/jandex-2.0.3.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1250,7 +1250,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1300,7 +1300,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/spring-aspects/5.0.7.RELEASE/spring-aspects-5.0.7.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1310,7 +1310,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-thymeleaf/2.0.3.RELEASE/spring-boot-starter-thymeleaf-2.0.3.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1330,7 +1330,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/thymeleaf/thymeleaf/3.0.9.RELEASE/thymeleaf-3.0.9.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1340,7 +1340,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/attoparser/attoparser/2.0.4.RELEASE/attoparser-2.0.4.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1350,7 +1350,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/unbescape/unbescape/1.1.5.RELEASE/unbescape-1.1.5.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1360,7 +1360,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.1.RELEASE/thymeleaf-extras-java8time-3.0.1.RELEASE-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1380,7 +1380,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1390,7 +1390,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1400,7 +1400,7 @@
     </orderEntry>  
     <orderEntry type="module-library" exported=""> 
       <library> 
-        <SOURCES>
+        <SOURCES> 
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/httpcomponents/httpmime/4.5/httpmime-4.5-sources.jar!/"/>
         </SOURCES>  
         <CLASSES>
@@ -1408,1120 +1408,1128 @@
         </CLASSES>
       </library> 
     </orderEntry>  
-    <orderEntry type="module-library" exported="">
-      <library>
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/guava/guava/27.0.1-jre/guava-27.0.1-jre-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/guava/guava/27.0.1-jre/guava-27.0.1-jre.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/guava/guava/27.0.1-jre/guava-27.0.1-jre-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES/>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar!/"/>
         </CLASSES>
-        <SOURCES/>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/spring/boot/mybatis-spring-boot-starter/1.3.2/mybatis-spring-boot-starter-1.3.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/spring/boot/mybatis-spring-boot-starter/1.3.2/mybatis-spring-boot-starter-1.3.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/spring/boot/mybatis-spring-boot-starter/1.3.2/mybatis-spring-boot-starter-1.3.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.2/mybatis-spring-boot-autoconfigure-1.3.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.2/mybatis-spring-boot-autoconfigure-1.3.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.2/mybatis-spring-boot-autoconfigure-1.3.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/mybatis-spring/1.3.2/mybatis-spring-1.3.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/mybatis-spring/1.3.2/mybatis-spring-1.3.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/mybatis/mybatis-spring/1.3.2/mybatis-spring-1.3.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/spring/boot/dubbo-spring-boot-starter/2.0.0/dubbo-spring-boot-starter-2.0.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/spring/boot/dubbo-spring-boot-starter/2.0.0/dubbo-spring-boot-starter-2.0.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/spring/boot/dubbo-spring-boot-starter/2.0.0/dubbo-spring-boot-starter-2.0.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/dubbo/2.6.0/dubbo-2.6.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/dubbo/2.6.0/dubbo-2.6.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/alibaba/dubbo/2.6.0/dubbo-2.6.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-actuator/2.0.3.RELEASE/spring-boot-starter-actuator-2.0.3.RELEASE-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-actuator/2.0.3.RELEASE/spring-boot-starter-actuator-2.0.3.RELEASE.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-starter-actuator/2.0.3.RELEASE/spring-boot-starter-actuator-2.0.3.RELEASE-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/2.0.3.RELEASE/spring-boot-actuator-autoconfigure-2.0.3.RELEASE-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/2.0.3.RELEASE/spring-boot-actuator-autoconfigure-2.0.3.RELEASE.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/2.0.3.RELEASE/spring-boot-actuator-autoconfigure-2.0.3.RELEASE-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-actuator/2.0.3.RELEASE/spring-boot-actuator-2.0.3.RELEASE-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-actuator/2.0.3.RELEASE/spring-boot-actuator-2.0.3.RELEASE.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/boot/spring-boot-actuator/2.0.3.RELEASE/spring-boot-actuator-2.0.3.RELEASE-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/micrometer/micrometer-core/1.0.5/micrometer-core-1.0.5-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/micrometer/micrometer-core/1.0.5/micrometer-core-1.0.5.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/micrometer/micrometer-core/1.0.5/micrometer-core-1.0.5-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/hdrhistogram/HdrHistogram/2.1.10/HdrHistogram-2.1.10-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/hdrhistogram/HdrHistogram/2.1.10/HdrHistogram-2.1.10.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/hdrhistogram/HdrHistogram/2.1.10/HdrHistogram-2.1.10-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/log4j/log4j/1.2.16/log4j-1.2.16-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/log4j/log4j/1.2.16/log4j-1.2.16-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jline/jline/0.9.94/jline-0.9.94-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jline/jline/0.9.94/jline-0.9.94.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jline/jline/0.9.94/jline-0.9.94-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/101tec/zkclient/0.10/zkclient-0.10-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/101tec/zkclient/0.10/zkclient-0.10.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/101tec/zkclient/0.10/zkclient-0.10-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/wdzg/clubcenter/club-common/1.0.0-SNAPSHOT/club-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/wdzg/clubcenter/club-common/1.0.0-SNAPSHOT/club-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/wdzg/clubcenter/club-common/1.0.0-SNAPSHOT/club-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/leaguecenter/league-common/1.0.0-SNAPSHOT/league-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/leaguecenter/league-common/1.0.0-SNAPSHOT/league-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/leaguecenter/league-common/1.0.0-SNAPSHOT/league-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/itemcenter/item-common/1.0.0-SNAPSHOT/item-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/itemcenter/item-common/1.0.0-SNAPSHOT/item-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/itemcenter/item-common/1.0.0-SNAPSHOT/item-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/solr/solr-solrj/6.6.4/solr-solrj-6.6.4-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/solr/solr-solrj/6.6.4/solr-solrj-6.6.4.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/solr/solr-solrj/6.6.4/solr-solrj-6.6.4-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/noggit/noggit/0.6/noggit-0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/noggit/noggit/0.6/noggit-0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/noggit/noggit/0.6/noggit-0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/usercenter/user-common/1.0.0-SNAPSHOT/user-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/usercenter/user-common/1.0.0-SNAPSHOT/user-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/usercenter/user-common/1.0.0-SNAPSHOT/user-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/financecenter/finance-common/1.0.0-SNAPSHOT/finance-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/financecenter/finance-common/1.0.0-SNAPSHOT/finance-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/financecenter/finance-common/1.0.0-SNAPSHOT/finance-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/tradecenter/trade-common/1.0.0-SNAPSHOT/trade-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/tradecenter/trade-common/1.0.0-SNAPSHOT/trade-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/tradecenter/trade-common/1.0.0-SNAPSHOT/trade-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/mkstandard/mkstandard/0.0.1-SNAPSHOT/mkstandard-0.0.1-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/mkstandard/mkstandard/0.0.1-SNAPSHOT/mkstandard-0.0.1-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/mkstandard/mkstandard/0.0.1-SNAPSHOT/mkstandard-0.0.1-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/mkgenerator/mkgenerator/0.0.1-SNAPSHOT/mkgenerator-0.0.1-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/mkgenerator/mkgenerator/0.0.1-SNAPSHOT/mkgenerator-0.0.1-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/mkgenerator/mkgenerator/0.0.1-SNAPSHOT/mkgenerator-0.0.1-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/freemarker/freemarker/2.3.28/freemarker-2.3.28-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/freemarker/freemarker/2.3.28/freemarker-2.3.28-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jstl/jstl/1.2/jstl-1.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jstl/jstl/1.2/jstl-1.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jstl/jstl/1.2/jstl-1.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-taglibs/5.0.6.RELEASE/spring-security-taglibs-5.0.6.RELEASE-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-taglibs/5.0.6.RELEASE/spring-security-taglibs-5.0.6.RELEASE.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-taglibs/5.0.6.RELEASE/spring-security-taglibs-5.0.6.RELEASE-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-acl/5.0.6.RELEASE/spring-security-acl-5.0.6.RELEASE-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-acl/5.0.6.RELEASE/spring-security-acl-5.0.6.RELEASE.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-acl/5.0.6.RELEASE/spring-security-acl-5.0.6.RELEASE-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-core/5.0.6.RELEASE/spring-security-core-5.0.6.RELEASE-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-core/5.0.6.RELEASE/spring-security-core-5.0.6.RELEASE.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-core/5.0.6.RELEASE/spring-security-core-5.0.6.RELEASE-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-web/5.0.6.RELEASE/spring-security-web-5.0.6.RELEASE-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-web/5.0.6.RELEASE/spring-security-web-5.0.6.RELEASE.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/springframework/security/spring-security-web/5.0.6.RELEASE/spring-security-web-5.0.6.RELEASE-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-ejb-plugin/2.3/maven-ejb-plugin-2.3-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-ejb-plugin/2.3/maven-ejb-plugin-2.3.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-ejb-plugin/2.3/maven-ejb-plugin-2.3-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/classworlds/classworlds/1.1/classworlds-1.1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/classworlds/classworlds/1.1/classworlds-1.1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/classworlds/classworlds/1.1/classworlds-1.1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-archiver/1.0/plexus-archiver-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-archiver/1.0/plexus-archiver-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-archiver/1.0/plexus-archiver-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-io/1.0/plexus-io-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-io/1.0/plexus-io-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-io/1.0/plexus-io-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-sink-api/1.0/doxia-sink-api-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-sink-api/1.0/doxia-sink-api-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-sink-api/1.0/doxia-sink-api-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry scope="RUNTIME" type="module-library">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry scope="RUNTIME" type="module-library"> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/jcraft/jsch/0.1.27/jsch-0.1.27-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/jcraft/jsch/0.1.27/jsch-0.1.27-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-ear-plugin/2.8/maven-ear-plugin-2.8-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-ear-plugin/2.8/maven-ear-plugin-2.8.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-ear-plugin/2.8/maven-ear-plugin-2.8-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-javadoc-plugin/2.8/maven-javadoc-plugin-2.8-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-javadoc-plugin/2.8/maven-javadoc-plugin-2.8.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/plugins/maven-javadoc-plugin/2.8/maven-javadoc-plugin-2.8-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-invoker/2.0.9/maven-invoker-2.0.9-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-invoker/2.0.9/maven-invoker-2.0.9.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-invoker/2.0.9/maven-invoker-2.0.9-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES/>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/velocity/velocity/1.5/velocity-1.5.jar!/"/>
         </CLASSES>
-        <SOURCES/>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-collections/commons-collections/3.2/commons-collections-3.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-collections/commons-collections/3.2/commons-collections-3.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/oro/oro/2.0.8/oro-2.0.8-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/oro/oro/2.0.8/oro-2.0.8.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/oro/oro/2.0.8/oro-2.0.8-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/thoughtworks/qdox/qdox/1.9.2/qdox-1.9.2-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/thoughtworks/qdox/qdox/1.9.2/qdox-1.9.2.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/thoughtworks/qdox/qdox/1.9.2/qdox-1.9.2-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/celebritycenter/celebrity-common/1.0.0-SNAPSHOT/celebrity-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/celebritycenter/celebrity-common/1.0.0-SNAPSHOT/celebrity-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/celebritycenter/celebrity-common/1.0.0-SNAPSHOT/celebrity-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/wdzg/monitorcenter/monitor-common/0.0.1-SNAPSHOT/monitor-common-0.0.1-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/wdzg/monitorcenter/monitor-common/0.0.1-SNAPSHOT/monitor-common-0.0.1-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/wdzg/monitorcenter/monitor-common/0.0.1-SNAPSHOT/monitor-common-0.0.1-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/formgroupcenter/formgroup-common/1.0.0-SNAPSHOT/formgroup-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/formgroupcenter/formgroup-common/1.0.0-SNAPSHOT/formgroup-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/formgroupcenter/formgroup-common/1.0.0-SNAPSHOT/formgroup-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/lotterycenter/lottery-common/1.0.0-SNAPSHOT/lottery-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/lotterycenter/lottery-common/1.0.0-SNAPSHOT/lottery-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/lotterycenter/lottery-common/1.0.0-SNAPSHOT/lottery-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/deliverycenter/delivery-common/1.0.0-SNAPSHOT/delivery-common-1.0.0-SNAPSHOT-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/deliverycenter/delivery-common/1.0.0-SNAPSHOT/delivery-common-1.0.0-SNAPSHOT.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/mockuai/ec/deliverycenter/delivery-common/1.0.0-SNAPSHOT/delivery-common-1.0.0-SNAPSHOT-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported=""> 
+      <library> 
+        <SOURCES> 
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar!/"/>
+        </SOURCES>  
         <CLASSES>
           <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/"/>
         </CLASSES>
-        <SOURCES>
-          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar!/"/>
-        </SOURCES>
+      </library> 
+    </orderEntry>  
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/mac/Program/apache-maven-3.5.2/repository/com/jiahangchun/test2/1.0-SNAPSHOT/test2-1.0-SNAPSHOT.jar!/"/>
+        </CLASSES>
+        <SOURCES/>
       </library>
     </orderEntry>
   </component> 
