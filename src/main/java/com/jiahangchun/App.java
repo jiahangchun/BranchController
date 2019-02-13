@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @DubboComponentScan(basePackages = "com.jiahangchun.dubbo")
 @SpringBootApplication(exclude = SolrAutoConfiguration.class)
 @EnableTransactionManagement
-@EnableEurekaServer
+//@EnableEurekaServer
 //@EnableEurekaClient
 public class App {
     public static void main(String[] args) {

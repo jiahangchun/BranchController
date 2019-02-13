@@ -8,3 +8,9 @@ It's an interceptor, so we just invoke it: The pointcut will have been evaluated
 具体的代理类：
 new CglibMethodInvocation
 List<Object> chain = this.advised.getInterceptorsAndDynamicInterceptionAdvice(method, targetClass);
+
+
+
+# 20190212 [指南](https://mp.weixin.qq.com/s/kD5nPNzkt68ZvQT5nCFmaA)
+* AOP模块
+    * 
