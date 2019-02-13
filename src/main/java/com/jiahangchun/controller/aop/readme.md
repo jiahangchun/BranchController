@@ -11,6 +11,19 @@ List<Object> chain = this.advised.getInterceptorsAndDynamicInterceptionAdvice(me
 
 
 
-# 20190212 [指南](https://mp.weixin.qq.com/s/kD5nPNzkt68ZvQT5nCFmaA)
+# 20190213[指南](https://mp.weixin.qq.com/s/kD5nPNzkt68ZvQT5nCFmaA)
 * AOP模块
-    * 
+    * invokerForRequest后查询自动被触发到interceptor()方法，进行填充advisors 包括了ExposeInvocationInterceptor InstantiationModelAwarePointcutAdvisor  
+        但是看了advisorChainFactory.getInterceptorsAndDynamicInterceptionAdvice 中获取对应拦截器的方法是从Advised中获取来的 。这个DefaultAdvisorChainFactory方法好像只是用于Add it conditionally 换句话说是有条件地筛选之前就准备好地拦截器。
+    * 通过断点知道了 advisor 是在  
+         ``
+         	public void addAdvisors(Advisor... advisors) {
+         		addAdvisors(Arrays.asList(advisors));
+         	}
+         ``  
+         方法中被注入地，然后在被使用地。
+    * 我们继续往上追踪，渐渐的发现addAdvisorChainFactory是在AbstractAutoProxyCreator中被注入的。但是为什么会是这个奇怪的名字？
+    * 梳理了下，发现Spring是这样去做的：在创建AopController的BeanDefinition的时候，主动wrapIfNecessary.
+        * 找到所有的可用的Advisor
+        * 通过类名（AopController）筛选出能被这个类使用的Advisor,然后直接封装进这个Advisor中。
+        * 当然之后就是使用，在方法被代理调用的时候，直接执行intercept方法，在里面被封装的chain链循环调用。
