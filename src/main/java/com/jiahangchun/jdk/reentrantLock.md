@@ -1,3 +1,7 @@
+* [指南](https://www.cnblogs.com/xrq730/p/4979021.html)
+* [volatile 指南](https://www.cnblogs.com/chenssy/p/6379280.html)
+
+## 之前
 * [大数据查询](https://mp.weixin.qq.com/s/O3Hl5bPwWr7KftKWNsbmsA)
     * 感觉这个guava的BloomFilter实现方式，关于数学的部分运用得很好：根据理想最大容量和容错率计算实际的容量。
     * 至于这个hash碰撞，为hashMap之类的提供了其他方式。但是感觉好像也是写死的进行碰撞，所以一直是允许有误差的存在。
@@ -15,7 +19,9 @@
     * synchronized 链表头之后就能遍历查寻添加Node
     * 如果添加之后，判断链表的个数是否大于 `TREEIFY_THRESHOLD = 8` ,如果是，进行红黑数的转换
         * 感觉这个要等Hash冲突到达很频繁的情况下才会发生的。毕竟每个table头下的链表长度要到达8，才能触发treeifyBin操作
-        
-        
-## 20190227 LongAdder vs AtomicLong
-LongAdder 感觉和ConcurrentHashMap的实现方式一致，只是将相同的标志位分成多个部分，然后将压力分担成多份。
+
+## 20190226
+* 问题
+    * reentrantLock 是如何释放锁后，非公平地启动某个线程地？？
+        * 虽然我看代码是知道，这个lock地unlock只是将持有地state变成0 & 持有地线程容器变成0 ，然后针对最后一个node进行Unsafe.unpack.但是程序是如何感知到那个被启用地线程地呢？？
+  
