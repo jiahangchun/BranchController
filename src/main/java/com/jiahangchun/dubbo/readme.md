@@ -42,3 +42,33 @@
 * dubbo的netty....(hold)
 * dubbo的常用配置
     * copy 自@Reference  
+    
+    
+    
+#20190304 问题集合
+* 如何判断dubbo是否使用了mock
+    * 这是存在在一个URL - Uniform Resource Locator的内部欧容器Map中，通过拼接.mock的key查看是否存在相应的配置判断是否存在制动注解
+* 如何选择重试策略？？FailoverClusterInvoker
+* loadBalance是如何进行的?
+    * 如果没有特殊指定，那么直接load Default
+    * 如果只有一个那么就选择这么一个，如果有两个，那么循环；否则就reselect
+    * 这个reselect好奇怪，考虑到权重，他初始化一个值，然后配合某个invoker(i)不断地对totalWeight进行减法，直到这个数小于0。
+* 众所周知dubbo是通过netty进行调用的，那么他是如何处理返回值的呢？？或者说是在哪里接收，而且还能被找到呢？？
+    * 通过debugger 终于发现Dubbo是如何设置返回值了。找到根源了 HeaderExchangeHandler.receive ,这个是处理返回消息的方法。
+    * 通过find功能找到了启动当前线程并且触发这个监听的类 AllChannelHandler
+    * 通过向上追踪，终于找到最开始的源头 SimpleChannelHandler.messageReceived
+    * 换句话说，dubbo是通过维持全局的ConcurrentHashMap<Channel,dubbo自己的channel>来关联自己请求 & 返回值
+
+
+# 20190304 核心类
+* AbstractDirectory?
+    * 这里应该是缓存了对应方法的真实的请求地址。
+* Router
+    * 这个应该就是用来选举的，例如他的子类 MockInvokerSelector
+* AbstractClusterInvoker 
+    * 这个大概率就是具体的执行了
+* FailoverClusterInvoker下的FutureFilter 实际调用的还是DubboInvoker
+* HeaderExchangeHandler ？
+    * 通过debugger 终于发现Dubbo是如何设置返回值了。
+    
+

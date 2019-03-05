@@ -1,3 +1,4 @@
+# 之前
 Mysql 阅读《深入浅出MYSQL》
 * 选择合适的数据类型
     * char & varchar
@@ -71,4 +72,21 @@ Mysql 阅读《深入浅出MYSQL》
 * 锁
     * 表锁
     * 行锁
+    
+## 20190213
+* 在程序一直运行的情况下（不断插入数据），表现为查询超时。但是当程序停止运行的时候又表现正常，在500万数据的情况下，耗时4秒。  
+``SELECT count(1) FROM md5;``
+
+* 这三种查询方式其实差别不大  
+``
+SELECT count(1) FROM jiahangchun.md5;
+SELECT count(*) FROM jiahangchun.md5;
+SELECT count(id) FROM jiahangchun.md5;
+``
+
+
+    
+文章
+* [最左前缀原则](https://blog.csdn.net/wx145/article/details/82839419)
+* [别人总结的条目](https://blog.csdn.net/chivydrs/article/details/81670475)
         

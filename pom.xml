@@ -218,6 +218,19 @@
             <artifactId>protobuf-javanano</artifactId>
             <version>3.0.0-alpha-5</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>1.19</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -271,6 +284,8 @@
             <id>spring-milestone</id>
             <url>https://repo.spring.io/libs-milestone</url>
         </repository>
+
+
     </repositories>
 
     <pluginRepositories>

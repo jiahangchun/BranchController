@@ -15,3 +15,7 @@
     * synchronized 链表头之后就能遍历查寻添加Node
     * 如果添加之后，判断链表的个数是否大于 `TREEIFY_THRESHOLD = 8` ,如果是，进行红黑数的转换
         * 感觉这个要等Hash冲突到达很频繁的情况下才会发生的。毕竟每个table头下的链表长度要到达8，才能触发treeifyBin操作
+        
+        
+## 20190227 LongAdder vs AtomicLong
+LongAdder 感觉和ConcurrentHashMap的实现方式一致，只是将相同的标志位分成多个部分，然后将压力分担成多份。
