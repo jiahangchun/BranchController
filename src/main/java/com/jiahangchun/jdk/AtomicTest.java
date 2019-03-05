@@ -11,6 +11,7 @@ public class AtomicTest {
     private static LongAdder longAdder = new LongAdder();
 
     public static void main(String[] args) {
+        longAdder.increment();
         for(int i=0;i<1000;i++) {
             new Thread(new Runnable() {
                 @Override

@@ -16,3 +16,7 @@
     * 一级缓存 & 二级缓存
         * 在同一个sqlSession中 通过cacheKey的方式来生成缓存对象
         * 这个需要单独设置的，当然也可以用第三方库
+        
+## 20190228
+* 为什么不要使用mybatis的二级缓存  
+    * [原因](https://www.cnblogs.com/KingIceMou/p/9389872.html)
