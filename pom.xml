@@ -157,19 +157,19 @@
         </dependency>
 
 
-        <!--这个是公司私有的，所以如果要验证dubbo需要自己启动服务-->
-        <dependency>
-            <groupId>com.mockuai.wdzg.clubcenter</groupId>
-            <artifactId>club-common</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+        <!--&lt;!&ndash;这个是公司私有的，所以如果要验证dubbo需要自己启动服务&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>com.mockuai.wdzg.clubcenter</groupId>-->
+            <!--<artifactId>club-common</artifactId>-->
+            <!--<version>1.0.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
 
 
-        <dependency>
-            <groupId>com.jiahangchun</groupId>
-            <artifactId>test2</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.jiahangchun</groupId>-->
+            <!--<artifactId>test2</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>com.alibaba.csp</groupId>
