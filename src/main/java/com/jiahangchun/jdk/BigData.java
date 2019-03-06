@@ -2,7 +2,6 @@ package com.jiahangchun.jdk;
 
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
-import sun.jvm.hotspot.utilities.Assert;
 
 /**
  * @author chunchun
