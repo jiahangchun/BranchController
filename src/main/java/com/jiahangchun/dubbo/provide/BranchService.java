@@ -8,4 +8,6 @@ package com.jiahangchun.dubbo.provide;
 public interface BranchService {
 
     public String a();
+
+    public String a(String b);
 }

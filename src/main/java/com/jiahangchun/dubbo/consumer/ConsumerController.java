@@ -39,6 +39,7 @@ public class ConsumerController {
         return conditionDTOResponse.getMsg();
     }
 
+
     /**
      * 其中 p 代表通过的请求,
      * block 代表被阻止的请求,
