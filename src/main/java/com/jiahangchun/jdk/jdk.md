@@ -1,5 +1,21 @@
 ## 提纲
 * [面试整理](https://www.jianshu.com/p/35b74796448b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
+    * jvm 内存区域
+        * 线程共享
+            * heap 堆只是保存了对象的实例而不是方法，运行时的数据区域，方法是存放在栈帧里面的 
+            * method area 加载类的类定义数据，存储一些常量，静态变量等信息
+        * 非线程共享
+            * stack 栈帧用于存放方法执行的内容
+            * native method area 本地方法区
+            * 程序计数器
+    * java运行时内存变化
+        * 永久代 在jdk1.8之后被取代为元数据区，这个元数据空间则时直接使用本地内存
+        * 新生代
+        * 两个幸存区 
+        * 老年代
+    *   
+     
+            
 * [设计模式]()
     * 代理实现方式 cglib jdb javassist,asm
 * [常见算法]()
