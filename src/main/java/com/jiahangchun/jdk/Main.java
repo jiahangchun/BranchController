@@ -1,10 +1,12 @@
 package com.jiahangchun.jdk;
 
+//import jdk.internal.misc.Unsafe;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+import java.lang.reflect.Proxy;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.LongAdder;
@@ -19,10 +21,12 @@ import java.util.concurrent.atomic.LongAdder;
 public class Main {
     private static AtomicLong count = new AtomicLong();
     private static LongAdder longAdder = new LongAdder();
+//    private static final Unsafe unsafe = Unsafe.getUnsafe();
 
     public static void main(String[] args) throws Exception {
         Options options = new OptionsBuilder().include(Main.class.getName()).forks(1).build();
         new Runner(options).run();
+
     }
 
 //    @Benchmark

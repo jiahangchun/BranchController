@@ -13,11 +13,18 @@
         * 新生代
         * 两个幸存区 
         * 老年代
-    *   
-     
-            
-* [设计模式]()
-    * 代理实现方式 cglib jdb javassist,asm
+    * 对象在内存中时如何初始化的
+        * 虚拟器用类加载器Class Loader加载java程序类文件到方法区
+        * 主线程运行static main（）时在虚拟机栈中建栈帧，压栈
+        * 执行到new Object（）时，在堆heap里创建对象
+        * 当虚拟机执行到new指令时，它先在常量池中查找“Dog”，看能否定位到Dog类的符号引用；如果能，说明这个类已经被加载到方法区了，则继续执行。如果没有，就让Class Loader先执行类的加载
+        * 会根据dog这个变量是实例变量、局部变量或静态变量的不同将引用放在不同的地方：
+            * 如果dog局部变量，dog变量在栈帧的局部变量表，这个对象的引用就放在栈帧。
+            * 如果dog是实例变量，dog变量在堆中，对象的引用就放在堆。
+            * 如果dog是静态变量，dog变量在方法区，对象的引用就放在方法区。
+         * 
+* [设计模式](https://www.cnblogs.com/geek6/p/3951677.html)
+    * [代理实现方式](https://blog.csdn.net/nimqbiyq/article/details/81166893) cglib jdb javassist,asm
 * [常见算法]()
 * [常见数据结构]()
 * [框架]()
@@ -37,7 +44,29 @@
         * 那么当spring和mybatis的语句参数关联在一起后，程序又是如何再次执行的呢？？
             * 参数替换，生成BoundSql
     * [spring]()
+        * spring的自动配置时如何实现的
+        * [BeanFactory 和 FactoryBean](https://www.cnblogs.com/aspirant/p/9082858.html)
+        * Spring IOC 的理解，其初始化过程
+        * Spring Bean 的生命周期，如何被管理的
+        * Spring Bean 的加载过程是怎样的
+        * 如果要你实现Spring AOP，请问怎么实现
     * [dubbo]()
-
+        * dubbo的自动配置又是如何实现的
+* 常见的jdk分析
+    * [volatile](https://www.cnblogs.com/java-jun-world2099/p/9268013.html)
+    * [AIO BIO NIO](https://blog.csdn.net/ty497122758/article/details/78979302) 
+    * [偏向锁、轻量级锁和重量级锁](https://www.cnblogs.com/paddix/p/5405678.html)
+    * ReentrantLock 
+    * CountDownLock
+    * CAS 的实现原理 AbstractQueuedSynchronizer
+        * 那么reentrantLock的队列又是如何实现的呢？？
+            * 其实我发现是直接在acquireQueued方法里面自行构建node节点链
+         * CAS 的常见问题
+            * ABA 问题
+          * ABA 解决问题的方法
+            * AtomicStampedReference
+    * ConcurrentHashMap 
+* mysql 
+    * 
 # 详细文章
 * 

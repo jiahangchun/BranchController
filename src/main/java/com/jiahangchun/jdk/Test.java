@@ -18,6 +18,8 @@ public class Test {
         concurrentHashMap.put(1,"1111");
         concurrentHashMap.put(2,"22222");
         concurrentHashMap.put(2,"33333");
+
+        concurrentHashMap.get(1);
         for(int i=0;i<100000000;i++){
             concurrentHashMap.put(i,"ddd");
         }

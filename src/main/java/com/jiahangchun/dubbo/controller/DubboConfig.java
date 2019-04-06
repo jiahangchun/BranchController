@@ -26,6 +26,7 @@ public class DubboConfig {
         registryConfig.setAddress("daily.zk.mockuai.com:2181");
         registryConfig.setProtocol("zookeeper");
         registryConfig.setPort(20000);
+        registryConfig.setCheck(false);
         return registryConfig;
     }
 

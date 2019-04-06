@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
  *
  * @author s
  */
-@CrossOrigin//允许跨越访问
+//@CrossOrigin//允许跨越访问
 @DubboComponentScan(basePackages = "com.jiahangchun.dubbo")
 @SpringBootApplication(exclude = SolrAutoConfiguration.class)
-@EnableTransactionManagement
+//@EnableTransactionManagement
 //@EnableEurekaServer
 //@EnableEurekaClient
 public class App {
